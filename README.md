@@ -1,5 +1,5 @@
 # Bexitor
-Welcome to Bexitor, a basic text editor for Windows, similar to Microsoft's Notepad. If you would like a compiled version or an installer, you can find it at my website: http://matthew28845.x10.mx/work.html
+Welcome to Bexitor, a basic text editor for Windows, similar to Microsoft's Notepad. If you would like a compiled version or an installer, you can find it on the releases page or at my website: http://matthew28845.x10.mx/work.html
 
 ## FAQ
 
