@@ -15,9 +15,10 @@ Public Class Form1
 
     Private Sub AboutBasicTextEditorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutBasicTextEditorToolStripMenuItem.Click
         MsgBox("Bexitor, basic text editor 
-Version 1.4.0 by Matthew Sigmond (matthew28845)
+Version 1.3.1 by Matthew Sigmond (matthew28845)
 Some icons by Nick Nakashima
-Built on January 3, 2019")
+Built on January 8, 2019
+Bexitor is free software.")
     End Sub
 
     Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
@@ -29,15 +30,34 @@ Built on January 3, 2019")
     End Sub
 
     Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
-        RichTextBox1.Clear()
-        Me.Text = "Bexitor - New File"
-    End Sub
+		If RichTextBox1.Modified = True Then
+			Dim SaveOrNo As Integer
+			SaveOrNo = MessageBox.Show("The current document is not saved. Would you like to save it before continuing?", "Save document?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
+			If SaveOrNo = Windows.Forms.DialogResult.Yes Then
+				Dim SaveFile As SaveFileDialog = New SaveFileDialog()
+				Dim File2Save As String
+				SaveFile.Title = "Choose a location and name to save as."
+				SaveFile.InitialDirectory = "%Documents%"
+				SaveFile.Filter = "Rich text files (*.rtf)|*.rtf"
+				SaveFile.FilterIndex = 1
+				SaveFile.RestoreDirectory = True
+				If SaveFile.ShowDialog() = DialogResult.OK Then
+					File2Save = SaveFile.FileName
+					RichTextBox1.SaveFile(File2Save)
+					Me.Text = ("Bexitor =" & File2Save)
+				End If
+			ElseIf SaveOrNo = Windows.Forms.DialogResult.No Then
+				RichTextBox1.Clear()
+			Else
+
+			End If
+		End If
+	End Sub
 
     Private Sub OpenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem.Click
         Dim OpenFile As OpenFileDialog = New OpenFileDialog()
-        Dim Filename As String
-        Dim oReader As StreamReader
-        Filename = "No file is being edited currently."
+		Dim Filename As String
+		Filename = "No file is being edited currently."
         OpenFile.Title = "Open a Text File"
         OpenFile.InitialDirectory = "%Documents%"
         OpenFile.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*"
@@ -46,9 +66,8 @@ Built on January 3, 2019")
         If OpenFile.ShowDialog() = DialogResult.OK Then
             Filename = OpenFile.FileName
             Me.Text = ("Bexitor - " & Filename)
-            oReader = New StreamReader(Filename, True)
-            RichTextBox1.Text = oReader.ReadToEnd
-        End If
+			RichTextBox1.LoadFile(Filename, RichTextBoxStreamType.PlainText)
+		End If
     End Sub
 
     Private Sub DisplayCurrentFileToolStripMenuItem_Click(sender As Object, e As EventArgs)
@@ -142,7 +161,7 @@ Built on January 3, 2019")
         End If
     End Sub
 
-    Private Sub FindToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FindToolStripMenuItem.Click
-        RichTextBox1.Find("ling")
-    End Sub
+	Private Sub FindToolStripMenuItem_Click(sender As Object, e As EventArgs)
+		RichTextBox1.Find("ling")
+	End Sub
 End Class
