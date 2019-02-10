@@ -15,9 +15,9 @@ Public Class Form1
 
     Private Sub AboutBasicTextEditorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutBasicTextEditorToolStripMenuItem.Click
         MsgBox("Bexitor, basic text editor 
-Version 1.3.1 by Matthew Sigmond (matthew28845)
+Version 1.4.0 by Matthew Sigmond (matthew28845)
 Some icons by Nick Nakashima
-Built on January 8, 2019
+Built on February 9, 2019
 Bexitor is free software.")
     End Sub
 
@@ -30,34 +30,32 @@ Bexitor is free software.")
     End Sub
 
     Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
-		If RichTextBox1.Modified = True Then
-			Dim SaveOrNo As Integer
-			SaveOrNo = MessageBox.Show("The current document is not saved. Would you like to save it before continuing?", "Save document?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
-			If SaveOrNo = Windows.Forms.DialogResult.Yes Then
-				Dim SaveFile As SaveFileDialog = New SaveFileDialog()
-				Dim File2Save As String
-				SaveFile.Title = "Choose a location and name to save as."
-				SaveFile.InitialDirectory = "%Documents%"
-				SaveFile.Filter = "Rich text files (*.rtf)|*.rtf"
-				SaveFile.FilterIndex = 1
-				SaveFile.RestoreDirectory = True
-				If SaveFile.ShowDialog() = DialogResult.OK Then
-					File2Save = SaveFile.FileName
-					RichTextBox1.SaveFile(File2Save)
-					Me.Text = ("Bexitor =" & File2Save)
-				End If
-			ElseIf SaveOrNo = Windows.Forms.DialogResult.No Then
-				RichTextBox1.Clear()
-			Else
-
-			End If
-		End If
-	End Sub
+        If RichTextBox1.Modified = True Then
+            Dim SaveOrNo As Integer
+            SaveOrNo = MessageBox.Show("Would you like to save this document before creating a new one?", "Save document?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
+            If SaveOrNo = Windows.Forms.DialogResult.Yes Then
+                Dim SaveFile As SaveFileDialog = New SaveFileDialog()
+                Dim File2Save As String
+                SaveFile.Title = "Choose a location and name to save as."
+                SaveFile.InitialDirectory = "%Documents%"
+                SaveFile.Filter = "Rich text files (*.rtf)|*.rtf"
+                SaveFile.FilterIndex = 1
+                SaveFile.RestoreDirectory = True
+                If SaveFile.ShowDialog() = DialogResult.OK Then
+                    File2Save = SaveFile.FileName
+                    RichTextBox1.SaveFile(File2Save)
+                    Me.Text = ("Bexitor =" & File2Save)
+                End If
+            ElseIf SaveOrNo = Windows.Forms.DialogResult.No Then
+                RichTextBox1.Clear()
+            End If
+        End If
+    End Sub
 
     Private Sub OpenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem.Click
         Dim OpenFile As OpenFileDialog = New OpenFileDialog()
-		Dim Filename As String
-		Filename = "No file is being edited currently."
+        Dim Filename As String
+        Filename = "No file is being edited currently."
         OpenFile.Title = "Open a Text File"
         OpenFile.InitialDirectory = "%Documents%"
         OpenFile.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*"
@@ -66,8 +64,8 @@ Bexitor is free software.")
         If OpenFile.ShowDialog() = DialogResult.OK Then
             Filename = OpenFile.FileName
             Me.Text = ("Bexitor - " & Filename)
-			RichTextBox1.LoadFile(Filename, RichTextBoxStreamType.PlainText)
-		End If
+            RichTextBox1.LoadFile(Filename, RichTextBoxStreamType.PlainText)
+        End If
     End Sub
 
     Private Sub DisplayCurrentFileToolStripMenuItem_Click(sender As Object, e As EventArgs)
@@ -75,25 +73,50 @@ Bexitor is free software.")
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
-        Me.Close()
+        If RichTextBox1.Modified = True Then
+            Dim SaveOrNo As Integer
+            SaveOrNo = MessageBox.Show("Would you like to save this document before exiting Bexitor?", "Save document?", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If SaveOrNo = Windows.Forms.DialogResult.Yes Then
+                Dim SaveFile As SaveFileDialog = New SaveFileDialog()
+                Dim File2Save As String
+                SaveFile.Title = "Choose a location and name to save as."
+                SaveFile.InitialDirectory = "%Documents%"
+                SaveFile.Filter = "Rich text files (*.rtf)|*.rtf"
+                SaveFile.FilterIndex = 1
+                SaveFile.RestoreDirectory = True
+                If SaveFile.ShowDialog() = DialogResult.OK Then
+                    Me.Close()
+                End If
+            ElseIf SaveOrNo = Windows.Forms.DialogResult.No Then
+                Me.Close()
+            Else
+                Stop
+                Me.Close()
+            End If
+        End If
     End Sub
 
     Private Sub ToolStripStatusLabel1_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
-        Dim SaveFile As SaveFileDialog = New SaveFileDialog()
-        Dim File2Save As String
-        SaveFile.Title = "Choose a location and name to save as."
-        SaveFile.InitialDirectory = "%Documents%"
-        SaveFile.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*"
-        SaveFile.FilterIndex = 1
-        SaveFile.RestoreDirectory = True
-        If SaveFile.ShowDialog() = DialogResult.OK Then
-            File2Save = SaveFile.FileName
-            My.Computer.FileSystem.WriteAllText(File2Save, RichTextBox1.Text, False)
-            Me.Text = ("Bexitor - " & File2Save)
+    Public Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
+        If Me.Text = "Bexitor - New File" Then
+            Dim SaveFile As SaveFileDialog = New SaveFileDialog()
+            Dim File2Save As String
+            SaveFile.Title = "Choose a location and name to save as."
+            SaveFile.InitialDirectory = "%Documents%"
+            SaveFile.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*"
+            SaveFile.FilterIndex = 1
+            SaveFile.RestoreDirectory = True
+            If SaveFile.ShowDialog() = DialogResult.OK Then
+                File2Save = SaveFile.FileName
+                My.Computer.FileSystem.WriteAllText(File2Save, RichTextBox1.Text, False)
+                Me.Text = ("Bexitor - " & File2Save)
+                Label1.Text = File2Save
+            End If
+        Else
+            My.Computer.FileSystem.WriteAllText(Label1.Text, RichTextBox1.Text, False)
         End If
     End Sub
 
@@ -104,8 +127,8 @@ Bexitor is free software.")
     Private Sub FontToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FontToolStripMenuItem.Click
         Dim FontPicker As FontDialog = New FontDialog()
         If FontPicker.ShowDialog() = DialogResult.OK Then
-			Me.RichTextBox1.Font = FontPicker.Font
-		End If
+            Me.RichTextBox1.Font = FontPicker.Font
+        End If
     End Sub
 
     Private Sub TextColorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TextColorToolStripMenuItem.Click
@@ -114,8 +137,8 @@ Bexitor is free software.")
         TextColor.AnyColor = True
         TextColor.FullOpen = True
         If TextColor.ShowDialog() = DialogResult.OK Then
-			Me.RichTextBox1.ForeColor = TextColor.Color
-		End If
+            Me.RichTextBox1.ForeColor = TextColor.Color
+        End If
     End Sub
 
     Private Sub HighlightColorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HighlightColorToolStripMenuItem.Click
@@ -125,8 +148,8 @@ Bexitor is free software.")
         BGColor.AnyColor = True
         BGColor.FullOpen = True
         If BGColor.ShowDialog() = DialogResult.OK Then
-			Me.RichTextBox1.BackColor = BGColor.Color
-		End If
+            Me.RichTextBox1.BackColor = BGColor.Color
+        End If
     End Sub
 
     Private Sub CutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CutToolStripMenuItem.Click
@@ -161,7 +184,42 @@ Bexitor is free software.")
         End If
     End Sub
 
-	Private Sub FindToolStripMenuItem_Click(sender As Object, e As EventArgs)
-		RichTextBox1.Find("ling")
-	End Sub
+    Private Sub FindToolStripMenuItem_Click(sender As Object, e As EventArgs)
+        RichTextBox1.Find("ling")
+    End Sub
+
+    Private Sub SaveAsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveAsToolStripMenuItem.Click
+        Dim SaveFile As SaveFileDialog = New SaveFileDialog()
+        Dim File2Save As String
+        SaveFile.Title = "Choose a location and name to save as."
+        SaveFile.InitialDirectory = "%Documents%"
+        SaveFile.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*"
+        SaveFile.FilterIndex = 1
+        SaveFile.RestoreDirectory = True
+        If SaveFile.ShowDialog() = DialogResult.OK Then
+            File2Save = SaveFile.FileName
+            My.Computer.FileSystem.WriteAllText(File2Save, RichTextBox1.Text, False)
+            Me.Text = ("Bexitor - " & File2Save)
+            Label1.Text = File2Save
+        End If
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.FormClosing
+        If RichTextBox1.Modified = True Then
+            Dim SaveOrNo As Integer
+            SaveOrNo = MessageBox.Show("Would you like to save this document before exiting Bexitor?", "Save document?", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If SaveOrNo = Windows.Forms.DialogResult.Yes Then
+                Dim SaveFile As SaveFileDialog = New SaveFileDialog()
+                Dim File2Save As String
+                SaveFile.Title = "Choose a location and name to save as."
+                SaveFile.InitialDirectory = "%Documents%"
+                SaveFile.Filter = "Rich text files (*.rtf)|*.rtf"
+                SaveFile.FilterIndex = 1
+                SaveFile.RestoreDirectory = True
+                If SaveFile.ShowDialog() = DialogResult.OK Then
+                    Stop
+                End If
+            End If
+        End If
+    End Sub
 End Class
