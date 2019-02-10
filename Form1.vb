@@ -122,6 +122,7 @@ Public Class Form1
 
     Private Sub FontToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FontToolStripMenuItem.Click
         Dim FontPicker As FontDialog = New FontDialog()
+        FontPicker.Font = RichTextBox1.Font
         If FontPicker.ShowDialog() = DialogResult.OK Then
             Me.RichTextBox1.Font = FontPicker.Font
         End If

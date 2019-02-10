@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Basic Text Editor")>
 <Assembly: AssemblyCompany("matthew28845")>
 <Assembly: AssemblyProduct("Bexitor")>
-<Assembly: AssemblyCopyright("Copyright © matthew28845 2018")>
+<Assembly: AssemblyCopyright("Copyright © matthew28845 2019")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
@@ -32,4 +32,4 @@ Imports System.Runtime.InteropServices
 ' <Assembly: AssemblyVersion("1.0.*")>
 
 <Assembly: AssemblyVersion("1.0.0.0")>
-<Assembly: AssemblyFileVersion("1.3.1")>
+<Assembly: AssemblyFileVersion("2.0.0")>
