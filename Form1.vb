@@ -10,15 +10,11 @@ Public Class Form1
     End Sub
 
     Private Sub WebsiteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WebsiteToolStripMenuItem.Click
-        Process.Start("http://matthew28845.x10.mx/work.html")
+        Process.Start("http://matthew28845.x10.mx/bexitor.html")
     End Sub
 
     Private Sub AboutBasicTextEditorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutBasicTextEditorToolStripMenuItem.Click
-        MsgBox("Bexitor, basic text editor 
-Version 1.4.0 by Matthew Sigmond (matthew28845)
-Some icons by Nick Nakashima
-Built on February 9, 2019
-Bexitor is free software.")
+        Form2.Show()
     End Sub
 
     Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked

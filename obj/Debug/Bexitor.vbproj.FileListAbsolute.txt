@@ -13,3 +13,4 @@ C:\Users\Matthew\source\repos\Basic Text Editor\Basic Text Editor\obj\Debug\Bexi
 C:\Users\Matthew\source\repos\Basic Text Editor\Basic Text Editor\obj\Debug\Bexitor.exe
 C:\Users\Matthew\source\repos\Basic Text Editor\Basic Text Editor\obj\Debug\Bexitor.xml
 C:\Users\Matthew\source\repos\Basic Text Editor\Basic Text Editor\obj\Debug\Bexitor.pdb
+C:\Users\Matthew\source\repos\Basic Text Editor\Basic Text Editor\obj\Debug\Bexitor.Form2.resources
