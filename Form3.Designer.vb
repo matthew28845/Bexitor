@@ -56,6 +56,7 @@ Partial Class Form3
         '
         'Button3
         '
+        Me.Button3.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.Button3.Location = New System.Drawing.Point(12, 130)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(82, 23)
@@ -65,8 +66,10 @@ Partial Class Form3
         '
         'Form3
         '
+        Me.AcceptButton = Me.Button1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.Button3
         Me.ClientSize = New System.Drawing.Size(279, 165)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button1)
@@ -76,7 +79,9 @@ Partial Class Form3
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Form3"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Find"
+        Me.TopMost = True
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

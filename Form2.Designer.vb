@@ -23,23 +23,15 @@ Partial Class Form2
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Bexitor.My.Resources.Resources.BexitorBanner
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(224, 48)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
         'Button1
         '
+        Me.Button1.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.Button1.Location = New System.Drawing.Point(87, 157)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
@@ -60,10 +52,21 @@ Partial Class Form2
     ""
         Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Bexitor.My.Resources.Resources.BexitorBanner
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(224, 48)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
         'Form2
         '
+        Me.AcceptButton = Me.Button1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.Button1
         Me.ClientSize = New System.Drawing.Size(249, 191)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button1)
@@ -71,6 +74,7 @@ Partial Class Form2
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form2"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "About Bexitor"
         Me.TopMost = True
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
