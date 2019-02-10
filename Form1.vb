@@ -81,14 +81,13 @@ Public Class Form1
                 SaveFile.FilterIndex = 1
                 SaveFile.RestoreDirectory = True
                 If SaveFile.ShowDialog() = DialogResult.OK Then
-                    Me.Close()
+                    Close()
                 End If
-            ElseIf SaveOrNo = Windows.Forms.DialogResult.No Then
-                Me.Close()
             Else
                 Stop
-                Me.Close()
             End If
+        Else
+            Me.Close()
         End If
     End Sub
 
@@ -181,8 +180,8 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub FindToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        RichTextBox1.Find("ling")
+    Private Sub FindToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FindToolStripMenuItem.Click
+        Form3.Show()
     End Sub
 
     Private Sub SaveAsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveAsToolStripMenuItem.Click
@@ -219,4 +218,5 @@ Public Class Form1
             End If
         End If
     End Sub
+
 End Class
