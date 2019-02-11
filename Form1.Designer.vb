@@ -25,36 +25,39 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FormatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ZoomOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ZoomTo100ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveAsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CopyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PasteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SelectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UndoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FindToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FormatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ZoomInToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FontToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TextColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HighlightColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WordWrapToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WebsiteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutBasicTextEditorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.FormatToolStripMenuItem, Me.HelpToolStripMenuItem, Me.ExitToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem, Me.FormatToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(800, 24)
@@ -67,6 +70,85 @@ Partial Class Form1
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
+        '
+        'EditToolStripMenuItem
+        '
+        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CutToolStripMenuItem, Me.CopyToolStripMenuItem, Me.PasteToolStripMenuItem, Me.SelectAllToolStripMenuItem, Me.UndoToolStripMenuItem, Me.FindToolStripMenuItem})
+        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
+        Me.EditToolStripMenuItem.Text = "Edit"
+        '
+        'FormatToolStripMenuItem
+        '
+        Me.FormatToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FontToolStripMenuItem, Me.TextColorToolStripMenuItem, Me.HighlightColorToolStripMenuItem, Me.WordWrapToolStripMenuItem})
+        Me.FormatToolStripMenuItem.Name = "FormatToolStripMenuItem"
+        Me.FormatToolStripMenuItem.Size = New System.Drawing.Size(57, 20)
+        Me.FormatToolStripMenuItem.Text = "Format"
+        '
+        'HelpToolStripMenuItem
+        '
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WebsiteToolStripMenuItem, Me.AboutBasicTextEditorToolStripMenuItem})
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.HelpToolStripMenuItem.Text = "Help"
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.AcceptsTab = True
+        Me.RichTextBox1.AutoWordSelection = True
+        Me.RichTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RichTextBox1.EnableAutoDragDrop = True
+        Me.RichTextBox1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox1.Location = New System.Drawing.Point(0, 24)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedBoth
+        Me.RichTextBox1.ShowSelectionMargin = True
+        Me.RichTextBox1.Size = New System.Drawing.Size(800, 426)
+        Me.RichTextBox1.TabIndex = 2
+        Me.RichTextBox1.Text = ""
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(660, 374)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Label1"
+        Me.Label1.Visible = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(237, 236)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(39, 13)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "Label2"
+        Me.Label2.Visible = False
+        '
+        'ViewToolStripMenuItem
+        '
+        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ZoomInToolStripMenuItem, Me.ZoomOutToolStripMenuItem, Me.ZoomTo100ToolStripMenuItem})
+        Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
+        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.ViewToolStripMenuItem.Text = "View"
+        '
+        'ZoomOutToolStripMenuItem
+        '
+        Me.ZoomOutToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon_26_
+        Me.ZoomOutToolStripMenuItem.Name = "ZoomOutToolStripMenuItem"
+        Me.ZoomOutToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.OemMinus), System.Windows.Forms.Keys)
+        Me.ZoomOutToolStripMenuItem.Size = New System.Drawing.Size(222, 22)
+        Me.ZoomOutToolStripMenuItem.Text = "Zoom Out"
+        '
+        'ZoomTo100ToolStripMenuItem
+        '
+        Me.ZoomTo100ToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon_28_
+        Me.ZoomTo100ToolStripMenuItem.Name = "ZoomTo100ToolStripMenuItem"
+        Me.ZoomTo100ToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D0), System.Windows.Forms.Keys)
+        Me.ZoomTo100ToolStripMenuItem.Size = New System.Drawing.Size(222, 22)
+        Me.ZoomTo100ToolStripMenuItem.Text = "Zoom to 100%"
         '
         'NewToolStripMenuItem
         '
@@ -101,19 +183,12 @@ Partial Class Form1
         Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
         Me.SaveAsToolStripMenuItem.Text = "Save As"
         '
-        'EditToolStripMenuItem
-        '
-        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CutToolStripMenuItem, Me.CopyToolStripMenuItem, Me.PasteToolStripMenuItem, Me.SelectAllToolStripMenuItem, Me.UndoToolStripMenuItem, Me.FindToolStripMenuItem})
-        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
-        Me.EditToolStripMenuItem.Text = "Edit"
-        '
         'CutToolStripMenuItem
         '
         Me.CutToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.cut
         Me.CutToolStripMenuItem.Name = "CutToolStripMenuItem"
         Me.CutToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
-        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.CutToolStripMenuItem.Text = "Cut"
         '
         'CopyToolStripMenuItem
@@ -121,7 +196,7 @@ Partial Class Form1
         Me.CopyToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.copy
         Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
         Me.CopyToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
-        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.CopyToolStripMenuItem.Text = "Copy"
         '
         'PasteToolStripMenuItem
@@ -129,7 +204,7 @@ Partial Class Form1
         Me.PasteToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.paste
         Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
         Me.PasteToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.V), System.Windows.Forms.Keys)
-        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.PasteToolStripMenuItem.Text = "Paste"
         '
         'SelectAllToolStripMenuItem
@@ -137,7 +212,7 @@ Partial Class Form1
         Me.SelectAllToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon_16_
         Me.SelectAllToolStripMenuItem.Name = "SelectAllToolStripMenuItem"
         Me.SelectAllToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
-        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.SelectAllToolStripMenuItem.Text = "Select All"
         '
         'UndoToolStripMenuItem
@@ -145,7 +220,7 @@ Partial Class Form1
         Me.UndoToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon_17_
         Me.UndoToolStripMenuItem.Name = "UndoToolStripMenuItem"
         Me.UndoToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Z), System.Windows.Forms.Keys)
-        Me.UndoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.UndoToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.UndoToolStripMenuItem.Text = "Undo"
         '
         'FindToolStripMenuItem
@@ -153,35 +228,36 @@ Partial Class Form1
         Me.FindToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon_19_
         Me.FindToolStripMenuItem.Name = "FindToolStripMenuItem"
         Me.FindToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F), System.Windows.Forms.Keys)
-        Me.FindToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.FindToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.FindToolStripMenuItem.Text = "Find..."
         '
-        'FormatToolStripMenuItem
+        'ZoomInToolStripMenuItem
         '
-        Me.FormatToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FontToolStripMenuItem, Me.TextColorToolStripMenuItem, Me.HighlightColorToolStripMenuItem, Me.WordWrapToolStripMenuItem})
-        Me.FormatToolStripMenuItem.Name = "FormatToolStripMenuItem"
-        Me.FormatToolStripMenuItem.Size = New System.Drawing.Size(57, 20)
-        Me.FormatToolStripMenuItem.Text = "Format"
+        Me.ZoomInToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon_27_
+        Me.ZoomInToolStripMenuItem.Name = "ZoomInToolStripMenuItem"
+        Me.ZoomInToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Oemplus), System.Windows.Forms.Keys)
+        Me.ZoomInToolStripMenuItem.Size = New System.Drawing.Size(222, 22)
+        Me.ZoomInToolStripMenuItem.Text = "Zoom In"
         '
         'FontToolStripMenuItem
         '
         Me.FontToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.textblack
         Me.FontToolStripMenuItem.Name = "FontToolStripMenuItem"
-        Me.FontToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.FontToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.FontToolStripMenuItem.Text = "Font..."
         '
         'TextColorToolStripMenuItem
         '
         Me.TextColorToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.text
         Me.TextColorToolStripMenuItem.Name = "TextColorToolStripMenuItem"
-        Me.TextColorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.TextColorToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.TextColorToolStripMenuItem.Text = "Text Color..."
         '
         'HighlightColorToolStripMenuItem
         '
         Me.HighlightColorToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.bg
         Me.HighlightColorToolStripMenuItem.Name = "HighlightColorToolStripMenuItem"
-        Me.HighlightColorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.HighlightColorToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.HighlightColorToolStripMenuItem.Text = "Highlight Color..."
         '
         'WordWrapToolStripMenuItem
@@ -191,69 +267,22 @@ Partial Class Form1
         Me.WordWrapToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.WordWrapToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon_18_
         Me.WordWrapToolStripMenuItem.Name = "WordWrapToolStripMenuItem"
-        Me.WordWrapToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.WordWrapToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.WordWrapToolStripMenuItem.Text = "Word Wrap"
-        '
-        'HelpToolStripMenuItem
-        '
-        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WebsiteToolStripMenuItem, Me.AboutBasicTextEditorToolStripMenuItem})
-        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
-        Me.HelpToolStripMenuItem.Text = "Help"
         '
         'WebsiteToolStripMenuItem
         '
         Me.WebsiteToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon_5_
         Me.WebsiteToolStripMenuItem.Name = "WebsiteToolStripMenuItem"
-        Me.WebsiteToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.WebsiteToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
         Me.WebsiteToolStripMenuItem.Text = "Website"
         '
         'AboutBasicTextEditorToolStripMenuItem
         '
         Me.AboutBasicTextEditorToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon_6_
         Me.AboutBasicTextEditorToolStripMenuItem.Name = "AboutBasicTextEditorToolStripMenuItem"
-        Me.AboutBasicTextEditorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutBasicTextEditorToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
         Me.AboutBasicTextEditorToolStripMenuItem.Text = "About Bexitor"
-        '
-        'ExitToolStripMenuItem
-        '
-        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
-        Me.ExitToolStripMenuItem.Text = "Exit"
-        '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.AcceptsTab = True
-        Me.RichTextBox1.AutoWordSelection = True
-        Me.RichTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RichTextBox1.EnableAutoDragDrop = True
-        Me.RichTextBox1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox1.Location = New System.Drawing.Point(0, 24)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.ShowSelectionMargin = True
-        Me.RichTextBox1.Size = New System.Drawing.Size(800, 426)
-        Me.RichTextBox1.TabIndex = 2
-        Me.RichTextBox1.Text = ""
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(660, 374)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Label1"
-        Me.Label1.Visible = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(237, 236)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 13)
-        Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Label2"
-        Me.Label2.Visible = False
         '
         'Form1
         '
@@ -283,24 +312,27 @@ Partial Class Form1
 	Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
 	Friend WithEvents WebsiteToolStripMenuItem As ToolStripMenuItem
 	Friend WithEvents AboutBasicTextEditorToolStripMenuItem As ToolStripMenuItem
-	Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
-	Friend WithEvents SaveToolStripMenuItem As ToolStripMenuItem
-	Friend WithEvents FormatToolStripMenuItem As ToolStripMenuItem
-	Friend WithEvents FontToolStripMenuItem As ToolStripMenuItem
-	Friend WithEvents TextColorToolStripMenuItem As ToolStripMenuItem
-	Friend WithEvents HighlightColorToolStripMenuItem As ToolStripMenuItem
-	Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
-	Friend WithEvents CutToolStripMenuItem As ToolStripMenuItem
-	Friend WithEvents CopyToolStripMenuItem As ToolStripMenuItem
-	Friend WithEvents PasteToolStripMenuItem As ToolStripMenuItem
-	Friend WithEvents SelectAllToolStripMenuItem As ToolStripMenuItem
-	Friend WithEvents UndoToolStripMenuItem As ToolStripMenuItem
-	Friend WithEvents WordWrapToolStripMenuItem As ToolStripMenuItem
-	Friend WithEvents OnToolStripMenuItem As ToolStripMenuItem
-	Friend WithEvents OffToolStripMenuItem As ToolStripMenuItem
-	Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents SaveToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FormatToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FontToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TextColorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HighlightColorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CopyToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PasteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SelectAllToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UndoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents WordWrapToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OnToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OffToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents SaveAsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label2 As Label
     Friend WithEvents FindToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ViewToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ZoomInToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ZoomOutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ZoomTo100ToolStripMenuItem As ToolStripMenuItem
 End Class

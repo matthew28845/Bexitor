@@ -34,7 +34,7 @@ Public Class Form1
                 Dim File2Save As String
                 SaveFile.Title = "Choose a location and name to save as."
                 SaveFile.InitialDirectory = "%Documents%"
-                SaveFile.Filter = "Rich text files (*.rtf)|*.rtf"
+                SaveFile.Filter = "Rich text files (*.rtf)|*.rtf|Text files (*.txt)|*.txt|All files (*.*)|*.*"
                 SaveFile.FilterIndex = 1
                 SaveFile.RestoreDirectory = True
                 If SaveFile.ShowDialog() = DialogResult.OK Then
@@ -54,13 +54,19 @@ Public Class Form1
         Filename = "No file is being edited currently."
         OpenFile.Title = "Open a Text File"
         OpenFile.InitialDirectory = "%Documents%"
-        OpenFile.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*"
+        OpenFile.Filter = "Rich text files (*.rtf)|*.rtf|Text files (*.txt)|*.txt|All files (*.*)|*.*"
         OpenFile.FilterIndex = 1
         OpenFile.RestoreDirectory = True
         If OpenFile.ShowDialog() = DialogResult.OK Then
-            Filename = OpenFile.FileName
-            Me.Text = ("Bexitor - " & Filename)
-            RichTextBox1.LoadFile(Filename, RichTextBoxStreamType.PlainText)
+            If OpenFile.FileName.EndsWith(".rtf") Then
+                Filename = OpenFile.FileName
+                Me.Text = ("Bexitor - " & Filename)
+                RichTextBox1.LoadFile(Filename, RichTextBoxStreamType.RichText)
+            Else
+                Filename = OpenFile.FileName
+                Me.Text = ("Bexitor - " & Filename)
+                RichTextBox1.LoadFile(Filename, RichTextBoxStreamType.PlainText)
+            End If
         End If
     End Sub
 
@@ -68,7 +74,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
+    Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs)
         If RichTextBox1.Modified = True Then
             Dim SaveOrNo As Integer
             SaveOrNo = MessageBox.Show("Would you like to save this document before exiting Bexitor?", "Save document?", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -77,7 +83,7 @@ Public Class Form1
                 Dim File2Save As String
                 SaveFile.Title = "Choose a location and name to save as."
                 SaveFile.InitialDirectory = "%Documents%"
-                SaveFile.Filter = "Rich text files (*.rtf)|*.rtf"
+                SaveFile.Filter = "Rich text files (*.rtf)|*.rtf|Text files (*.txt)|*.txt|All files (*.*)|*.*"
                 SaveFile.FilterIndex = 1
                 SaveFile.RestoreDirectory = True
                 If SaveFile.ShowDialog() = DialogResult.OK Then
@@ -101,7 +107,7 @@ Public Class Form1
             Dim File2Save As String
             SaveFile.Title = "Choose a location and name to save as."
             SaveFile.InitialDirectory = "%Documents%"
-            SaveFile.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*"
+            SaveFile.Filter = "Rich text files (*.rtf)|*.rtf|Text files (*.txt)|*.txt|All files (*.*)|*.*"
             SaveFile.FilterIndex = 1
             SaveFile.RestoreDirectory = True
             If SaveFile.ShowDialog() = DialogResult.OK Then
@@ -123,7 +129,7 @@ Public Class Form1
         Dim FontPicker As FontDialog = New FontDialog()
         FontPicker.Font = RichTextBox1.Font
         If FontPicker.ShowDialog() = DialogResult.OK Then
-            Me.RichTextBox1.Font = FontPicker.Font
+            Me.RichTextBox1.SelectionFont = FontPicker.Font
         End If
     End Sub
 
@@ -133,7 +139,7 @@ Public Class Form1
         TextColor.AnyColor = True
         TextColor.FullOpen = True
         If TextColor.ShowDialog() = DialogResult.OK Then
-            Me.RichTextBox1.ForeColor = TextColor.Color
+            Me.RichTextBox1.SelectionColor = TextColor.Color
         End If
     End Sub
 
@@ -144,7 +150,7 @@ Public Class Form1
         BGColor.AnyColor = True
         BGColor.FullOpen = True
         If BGColor.ShowDialog() = DialogResult.OK Then
-            Me.RichTextBox1.BackColor = BGColor.Color
+            Me.RichTextBox1.SelectionBackColor = BGColor.Color
         End If
     End Sub
 
@@ -219,4 +225,15 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub ZoomInToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZoomInToolStripMenuItem.Click
+        RichTextBox1.ZoomFactor = (RichTextBox1.ZoomFactor + 0.1)
+    End Sub
+
+    Private Sub ZoomOutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZoomOutToolStripMenuItem.Click
+        RichTextBox1.ZoomFactor = (RichTextBox1.ZoomFactor - 0.1)
+    End Sub
+
+    Private Sub ZoomTo100ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZoomTo100ToolStripMenuItem.Click
+        RichTextBox1.ZoomFactor = 1
+    End Sub
 End Class

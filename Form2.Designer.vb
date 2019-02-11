@@ -47,8 +47,8 @@ Partial Class Form2
         Me.TextBox1.ReadOnly = True
         Me.TextBox1.Size = New System.Drawing.Size(224, 84)
         Me.TextBox1.TabIndex = 2
-        Me.TextBox1.Text = "Bexitor, basic text editor " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Version 2.1.0 by Matthew Sigmond (matthew28845)" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Som" &
-    "e icons by Nick Nakashima" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Built on February 10, 2019" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bexitor is free software." &
+        Me.TextBox1.Text = "Bexitor, basic text editor " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Version 2.2.0 by Matthew Sigmond (matthew28845)" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Som" &
+    "e icons by Nick Nakashima" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Built on February 11, 2019" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bexitor is free software." &
     ""
         Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '

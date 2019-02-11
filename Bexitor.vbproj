@@ -205,6 +205,9 @@
   <ItemGroup>
     <Content Include="Bexitor.ico" />
     <Content Include="favicon%287%29.ico" />
+    <None Include="Resources\favicon%2828%29.ico" />
+    <None Include="Resources\favicon%2827%29.ico" />
+    <None Include="Resources\favicon%2826%29.ico" />
     <None Include="Resources\BexitorBanner.png" />
     <None Include="Resources\favicon%2819%29.ico" />
     <None Include="Resources\favicon%2818%29.ico" />
