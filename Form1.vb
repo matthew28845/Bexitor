@@ -44,6 +44,7 @@ Public Class Form1
                 End If
             ElseIf SaveOrNo = Windows.Forms.DialogResult.No Then
                 RichTextBox1.Clear()
+                Me.Text = "Bexitor - New File"
             End If
         End If
     End Sub
@@ -112,12 +113,12 @@ Public Class Form1
             SaveFile.RestoreDirectory = True
             If SaveFile.ShowDialog() = DialogResult.OK Then
                 File2Save = SaveFile.FileName
-                My.Computer.FileSystem.WriteAllText(File2Save, RichTextBox1.Text, False)
+                RichTextBox1.SaveFile(File2Save)
                 Me.Text = ("Bexitor - " & File2Save)
                 Label1.Text = File2Save
             End If
         Else
-            My.Computer.FileSystem.WriteAllText(Label1.Text, RichTextBox1.Text, False)
+            RichTextBox1.SaveFile(Label1.Text)
         End If
     End Sub
 
@@ -195,12 +196,12 @@ Public Class Form1
         Dim File2Save As String
         SaveFile.Title = "Choose a location and name to save as."
         SaveFile.InitialDirectory = "%Documents%"
-        SaveFile.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*"
+        SaveFile.Filter = "Rich text files (*.rtf)|*.rtf|Text files (*.txt)|*.txt|All files (*.*)|*.*"
         SaveFile.FilterIndex = 1
         SaveFile.RestoreDirectory = True
         If SaveFile.ShowDialog() = DialogResult.OK Then
             File2Save = SaveFile.FileName
-            My.Computer.FileSystem.WriteAllText(File2Save, RichTextBox1.Text, False)
+            RichTextBox1.SaveFile(File2Save)
             Me.Text = ("Bexitor - " & File2Save)
             Label1.Text = File2Save
         End If
@@ -215,11 +216,11 @@ Public Class Form1
                 Dim File2Save As String
                 SaveFile.Title = "Choose a location and name to save as."
                 SaveFile.InitialDirectory = "%Documents%"
-                SaveFile.Filter = "Rich text files (*.rtf)|*.rtf"
+                SaveFile.Filter = "Rich text files (*.rtf)|*.rtf|Text files (*.txt)|*.txt|All files (*.*)|*.*"
                 SaveFile.FilterIndex = 1
                 SaveFile.RestoreDirectory = True
                 If SaveFile.ShowDialog() = DialogResult.OK Then
-                    Stop
+                    RichTextBox1.SaveFile(File2Save)
                 End If
             End If
         End If
