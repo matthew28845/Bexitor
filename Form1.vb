@@ -33,19 +33,37 @@ Public Class Form1
                 Dim SaveFile As SaveFileDialog = New SaveFileDialog()
                 Dim File2Save As String
                 SaveFile.Title = "Choose a location and name to save as."
+
                 SaveFile.InitialDirectory = "%Documents%"
                 SaveFile.Filter = "Rich text files (*.rtf)|*.rtf|Text files (*.txt)|*.txt|All files (*.*)|*.*"
                 SaveFile.FilterIndex = 1
                 SaveFile.RestoreDirectory = True
                 If SaveFile.ShowDialog() = DialogResult.OK Then
+                    If SaveFile.FileName.EndsWith(".rtf") Then
+                        ToolStripStatusLabel2.Text = "Rich Text"
+                    Else
+                        ToolStripStatusLabel2.Text = "Plain Text"
+                    End If
                     File2Save = SaveFile.FileName
                     RichTextBox1.SaveFile(File2Save)
                     Me.Text = ("Bexitor =" & File2Save)
+                    ToolStripStatusLabel1.Text = File2Save
+                ElseIf SaveOrNo = Windows.Forms.DialogResult.No Then
+                    RichTextBox1.Clear()
+                    Me.Text = "Bexitor - New File"
+                    ToolStripStatusLabel1.Text = "New File"
+                    If RichTextBox1.Rtf = True Then
+                        ToolStripStatusLabel2.Text = "Rich Text"
+                    Else
+                        ToolStripStatusLabel2.Text = "Plain Text"
+                    End If
                 End If
-            ElseIf SaveOrNo = Windows.Forms.DialogResult.No Then
-                RichTextBox1.Clear()
-                Me.Text = "Bexitor - New File"
             End If
+        Else
+            RichTextBox1.Clear()
+            ToolStripStatusLabel1.Text = "New File"
+            ToolStripStatusLabel2.Text = "Plain Text"
+            ToolStripStatusLabel6.Text = RichTextBox1.Font.Name & ", " & RichTextBox1.Font.SizeInPoints & "pt"
         End If
     End Sub
 
@@ -63,10 +81,14 @@ Public Class Form1
                 Filename = OpenFile.FileName
                 Me.Text = ("Bexitor - " & Filename)
                 RichTextBox1.LoadFile(Filename, RichTextBoxStreamType.RichText)
+                ToolStripStatusLabel1.Text = Filename
+                ToolStripStatusLabel2.Text = "Rich Text"
             Else
                 Filename = OpenFile.FileName
                 Me.Text = ("Bexitor - " & Filename)
                 RichTextBox1.LoadFile(Filename, RichTextBoxStreamType.PlainText)
+                ToolStripStatusLabel1.Text = Filename
+                ToolStripStatusLabel2.Text = "Plain Text"
             End If
         End If
     End Sub
@@ -227,14 +249,22 @@ Public Class Form1
     End Sub
 
     Private Sub ZoomInToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZoomInToolStripMenuItem.Click
-        RichTextBox1.ZoomFactor = (RichTextBox1.ZoomFactor + 0.1)
+        If RichTextBox1.ZoomFactor < 63.867 Then
+            RichTextBox1.ZoomFactor = (RichTextBox1.ZoomFactor + 0.1)
+        End If
     End Sub
 
     Private Sub ZoomOutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZoomOutToolStripMenuItem.Click
-        RichTextBox1.ZoomFactor = (RichTextBox1.ZoomFactor - 0.1)
+        If RichTextBox1.ZoomFactor > 0.115 Then
+            RichTextBox1.ZoomFactor = (RichTextBox1.ZoomFactor - 0.1)
+        End If
     End Sub
 
     Private Sub ZoomTo100ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZoomTo100ToolStripMenuItem.Click
         RichTextBox1.ZoomFactor = 1
+    End Sub
+
+    Private Sub ToolStripStatusLabel6_Click(sender As Object, e As EventArgs) Handles ToolStripStatusLabel6.Click
+
     End Sub
 End Class
