@@ -138,7 +138,7 @@ Public Class Form1
     End Sub
 
     Public Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
-        If Me.Text = "Bexitor - New File" Then
+        If Me.Text = "Bexitor - New File" And ToolStripStatusLabel2.Text = "New File" Then
             Dim SaveFile As SaveFileDialog = New SaveFileDialog()
             Dim File2Save As String
             SaveFile.Title = "Choose a location and name to save as."
@@ -148,12 +148,20 @@ Public Class Form1
             SaveFile.RestoreDirectory = True
             If SaveFile.ShowDialog() = DialogResult.OK Then
                 File2Save = SaveFile.FileName
-                RichTextBox1.SaveFile(File2Save)
+                If SaveFile.FileName.EndsWith(".rtf") Then
+                    RichTextBox1.SaveFile(File2Save)
+                Else
+                    My.Computer.FileSystem.WriteAllText(File2Save, RichTextBox1.Text, False)
+                End If
                 Me.Text = ("Bexitor - " & File2Save)
                 Label1.Text = File2Save
             End If
         Else
-            RichTextBox1.SaveFile(Label1.Text)
+            If ToolStripStatusLabel2.Text.EndsWith(".rtf") Then
+                RichTextBox1.SaveFile(ToolStripStatusLabel2.Text)
+            Else
+                My.Computer.FileSystem.WriteAllText(ToolStripStatusLabel2.Text, RichTextBox1.Text, False)
+            End If
         End If
     End Sub
 
