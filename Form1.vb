@@ -46,18 +46,8 @@ Public Class Form1
                     ToolStripStatusLabel1.Text = File2Save
                     If SaveFile.FileName.EndsWith(".rtf") Then
                         ToolStripStatusLabel1.Text = File2Save
-                        ToolStripStatusLabel2.Text = "Rich Text"
-                        If RichTextBox1.SelectionFont.Style = 0 Then
-                            FontStyle = "Regular"
-                        ElseIf RichTextBox1.SelectionFont.Style = 1 Then
-                            FontStyle = "Bold"
-                        ElseIf RichTextBox1.SelectionFont.Style = 2 Then
-                            FontStyle = "Italic"
-                        Else
-                            FontStyle = "Bold And Italic"
-                        End If
                         ToolStripStatusLabel6.Text = RichTextBox1.SelectionFont.Name & ", " & FontStyle & ", " & RichTextBox1.SelectionFont.SizeInPoints & "pt"
-                    Else
+                    ElseIf SaveFile.Filename Then
                         ToolStripStatusLabel1.Text = File2Save
                         ToolStripStatusLabel2.Text = "Plain Text"
                         If RichTextBox1.SelectionFont.Style = 0 Then
@@ -65,11 +55,31 @@ Public Class Form1
                         ElseIf RichTextBox1.SelectionFont.Style = 1 Then
                             FontStyle = "Bold"
                         ElseIf RichTextBox1.SelectionFont.Style = 2 Then
-                            FontStyle = "Italic"
-                        Else
-                            FontStyle = "Bold And Italic"
+                            ToolStripStatusLabel2.Text = "Rich Text"
+                            If RichTextBox1.SelectionFont.Style = 0 Then
+                                FontStyle = "Regular"
+                            ElseIf RichTextBox1.SelectionFont.Style = 1 Then
+                                FontStyle = "Bold"
+                            ElseIf RichTextBox1.SelectionFont.Style = 2 Then
+                                FontStyle = "Italic"
+                            Else
+                                FontStyle = "Bold And Italic"
+                            End If
                         End If
                         ToolStripStatusLabel6.Text = RichTextBox1.SelectionFont.Name & ", " & FontStyle & ", " & RichTextBox1.SelectionFont.SizeInPoints & "pt"
+                    Else
+                        ToolStripStatusLabel1.Text = File2Save
+                        ToolStripStatusLabel2.Text = "Plain Text"
+                            If RichTextBox1.SelectionFont.Style = 0 Then
+                                FontStyle = "Regular"
+                            ElseIf RichTextBox1.SelectionFont.Style = 1 Then
+                                FontStyle = "Bold"
+                            ElseIf RichTextBox1.SelectionFont.Style = 2 Then
+                                FontStyle = "Italic"
+                            Else
+                                FontStyle = "Bold And Italic"
+                            End If
+                            ToolStripStatusLabel6.Text = RichTextBox1.SelectionFont.Name & ", " & FontStyle & ", " & RichTextBox1.SelectionFont.SizeInPoints & "pt"
                     End If
                 ElseIf SaveOrNo = Windows.Forms.DialogResult.No Then
                     RichTextBox1.Clear()
@@ -81,12 +91,39 @@ Public Class Form1
                         ToolStripStatusLabel2.Text = "Plain Text"
                     End If
                 End If
+            Else
+                Dim FontStyle As String
+                RichTextBox1.Clear()
+                ToolStripStatusLabel1.Text = "New File"
+                ToolStripStatusLabel2.Text = "Plain Text"
+                If RichTextBox1.SelectionFont.Style = 0 Then
+                    FontStyle = "Regular"
+                ElseIf RichTextBox1.SelectionFont.Style = 1 Then
+                    FontStyle = "Bold"
+                ElseIf RichTextBox1.SelectionFont.Style = 2 Then
+                    FontStyle = "Italic"
+                Else
+                    FontStyle = "Bold And Italic"
+                End If
+                ToolStripStatusLabel6.Text = RichTextBox1.SelectionFont.Name & ", " & FontStyle & ", " & RichTextBox1.SelectionFont.SizeInPoints & "pt"
+                Label1.Text = "new"
             End If
         Else
+            Dim FontStyle As String
             RichTextBox1.Clear()
             ToolStripStatusLabel1.Text = "New File"
             ToolStripStatusLabel2.Text = "Plain Text"
-            ToolStripStatusLabel6.Text = RichTextBox1.Font.Name & ", " & RichTextBox1.Font.SizeInPoints & "pt"
+            If RichTextBox1.SelectionFont.Style = 0 Then
+                FontStyle = "Regular"
+            ElseIf RichTextBox1.SelectionFont.Style = 1 Then
+                FontStyle = "Bold"
+            ElseIf RichTextBox1.SelectionFont.Style = 2 Then
+                FontStyle = "Italic"
+            Else
+                FontStyle = "Bold And Italic"
+            End If
+            ToolStripStatusLabel6.Text = RichTextBox1.SelectionFont.Name & ", " & FontStyle & ", " & RichTextBox1.SelectionFont.SizeInPoints & "pt"
+            Label1.Text = "new"
         End If
     End Sub
 
@@ -117,6 +154,7 @@ Public Class Form1
                     FontStyle = "Bold And Italic"
                 End If
                 ToolStripStatusLabel6.Text = RichTextBox1.SelectionFont.Name & ", " & FontStyle & ", " & RichTextBox1.SelectionFont.SizeInPoints & "pt"
+                Label1.Text = Filename
             Else
                 Filename = OpenFile.FileName
                 Me.Text = ("Bexitor - " & Filename)
@@ -133,12 +171,13 @@ Public Class Form1
                     FontStyle = "Bold And Italic"
                 End If
                 ToolStripStatusLabel6.Text = RichTextBox1.SelectionFont.Name & ", " & FontStyle & ", " & RichTextBox1.SelectionFont.SizeInPoints & "pt"
+                Label1.Text = Filename
             End If
         End If
     End Sub
 
     Public Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
-        If Me.Text = "Bexitor - New File" And ToolStripStatusLabel2.Text = "New File" Then
+        If Label1.Text = "new" Then
             Dim SaveFile As SaveFileDialog = New SaveFileDialog()
             Dim File2Save As String
             SaveFile.Title = "Choose a location and name to save as."
@@ -157,10 +196,10 @@ Public Class Form1
                 Label1.Text = File2Save
             End If
         Else
-            If ToolStripStatusLabel2.Text.EndsWith(".rtf") Then
-                RichTextBox1.SaveFile(ToolStripStatusLabel2.Text)
+            If Label1.Text.EndsWith("rtf") Then
+                RichTextBox1.SaveFile(Label1.Text)
             Else
-                My.Computer.FileSystem.WriteAllText(ToolStripStatusLabel2.Text, RichTextBox1.Text, False)
+                My.Computer.FileSystem.WriteAllText(Label1.Text, RichTextBox1.Text, False)
             End If
         End If
     End Sub
@@ -243,7 +282,11 @@ Public Class Form1
         SaveFile.RestoreDirectory = True
         If SaveFile.ShowDialog() = DialogResult.OK Then
             File2Save = SaveFile.FileName
-            RichTextBox1.SaveFile(File2Save)
+            If SaveFile.FileName.EndsWith(".rtf") Then
+                RichTextBox1.SaveFile(File2Save)
+            Else
+                My.Computer.FileSystem.WriteAllText(File2Save, RichTextBox1.Text, False)
+            End If
             Me.Text = ("Bexitor - " & File2Save)
             Label1.Text = File2Save
         End If

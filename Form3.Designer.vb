@@ -31,15 +31,15 @@ Partial Class Form3
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(51, 12)
+        Me.TextBox1.Location = New System.Drawing.Point(51, 22)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(216, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(302, 20)
         Me.TextBox1.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 15)
+        Me.Label1.Location = New System.Drawing.Point(12, 25)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(33, 13)
         Me.Label1.TabIndex = 1
@@ -47,7 +47,7 @@ Partial Class Form3
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 61)
+        Me.Button1.Location = New System.Drawing.Point(183, 77)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(82, 23)
         Me.Button1.TabIndex = 2
@@ -57,7 +57,7 @@ Partial Class Form3
         'Button3
         '
         Me.Button3.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Button3.Location = New System.Drawing.Point(12, 130)
+        Me.Button3.Location = New System.Drawing.Point(271, 77)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(82, 23)
         Me.Button3.TabIndex = 4
@@ -70,12 +70,13 @@ Partial Class Form3
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Button3
-        Me.ClientSize = New System.Drawing.Size(279, 165)
+        Me.ClientSize = New System.Drawing.Size(365, 112)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
         Me.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Form3"
