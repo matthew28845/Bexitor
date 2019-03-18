@@ -348,4 +348,8 @@ Public Class Form1
         End If
         ToolStripStatusLabel6.Text = RichTextBox1.SelectionFont.Name & ", " & FontStyle & ", " & RichTextBox1.SelectionFont.SizeInPoints & "pt"
     End Sub
+
+    Private Sub FormatToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FormatToolStripMenuItem.Click
+
+    End Sub
 End Class

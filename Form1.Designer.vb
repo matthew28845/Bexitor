@@ -55,15 +55,15 @@ Partial Class Form1
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel2 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel6 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel4 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.BackColor = System.Drawing.SystemColors.MenuBar
+        Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem, Me.FormatToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
@@ -74,12 +74,16 @@ Partial Class Form1
         'FileToolStripMenuItem
         '
         Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem, Me.OpenToolStripMenuItem, Me.SaveToolStripMenuItem, Me.SaveAsToolStripMenuItem})
+        Me.FileToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
         '
         'NewToolStripMenuItem
         '
+        Me.NewToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.NewToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.NewToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.NewToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources._new
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
         Me.NewToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
@@ -88,6 +92,9 @@ Partial Class Form1
         '
         'OpenToolStripMenuItem
         '
+        Me.OpenToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.OpenToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.OpenToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.OpenToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.load
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
         Me.OpenToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
@@ -96,6 +103,9 @@ Partial Class Form1
         '
         'SaveToolStripMenuItem
         '
+        Me.SaveToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.SaveToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.SaveToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.SaveToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon__3_
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
         Me.SaveToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
@@ -104,6 +114,9 @@ Partial Class Form1
         '
         'SaveAsToolStripMenuItem
         '
+        Me.SaveAsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.SaveAsToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.SaveAsToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.SaveAsToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon__4_
         Me.SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem"
         Me.SaveAsToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
@@ -114,67 +127,83 @@ Partial Class Form1
         'EditToolStripMenuItem
         '
         Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CutToolStripMenuItem, Me.CopyToolStripMenuItem, Me.PasteToolStripMenuItem, Me.SelectAllToolStripMenuItem, Me.UndoToolStripMenuItem, Me.FindToolStripMenuItem})
+        Me.EditToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
         Me.EditToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
         Me.EditToolStripMenuItem.Text = "Edit"
         '
         'CutToolStripMenuItem
         '
+        Me.CutToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.CutToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.CutToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.cut
         Me.CutToolStripMenuItem.Name = "CutToolStripMenuItem"
         Me.CutToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
-        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CutToolStripMenuItem.Text = "Cut"
         '
         'CopyToolStripMenuItem
         '
+        Me.CopyToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.CopyToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.CopyToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.copy
         Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
         Me.CopyToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
-        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CopyToolStripMenuItem.Text = "Copy"
         '
         'PasteToolStripMenuItem
         '
+        Me.PasteToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.PasteToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.PasteToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.paste
         Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
         Me.PasteToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.V), System.Windows.Forms.Keys)
-        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.PasteToolStripMenuItem.Text = "Paste"
         '
         'SelectAllToolStripMenuItem
         '
+        Me.SelectAllToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.SelectAllToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.SelectAllToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon_16_
         Me.SelectAllToolStripMenuItem.Name = "SelectAllToolStripMenuItem"
         Me.SelectAllToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
-        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SelectAllToolStripMenuItem.Text = "Select All"
         '
         'UndoToolStripMenuItem
         '
+        Me.UndoToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.UndoToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.UndoToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon_17_
         Me.UndoToolStripMenuItem.Name = "UndoToolStripMenuItem"
         Me.UndoToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Z), System.Windows.Forms.Keys)
-        Me.UndoToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.UndoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.UndoToolStripMenuItem.Text = "Undo"
         '
         'FindToolStripMenuItem
         '
+        Me.FindToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.FindToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.FindToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon_19_
         Me.FindToolStripMenuItem.Name = "FindToolStripMenuItem"
         Me.FindToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F), System.Windows.Forms.Keys)
-        Me.FindToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.FindToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.FindToolStripMenuItem.Text = "Find..."
         '
         'ViewToolStripMenuItem
         '
         Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ZoomInToolStripMenuItem, Me.ZoomOutToolStripMenuItem, Me.ZoomTo100ToolStripMenuItem})
+        Me.ViewToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
         Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.ViewToolStripMenuItem.Text = "View"
         '
         'ZoomInToolStripMenuItem
         '
+        Me.ZoomInToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.ZoomInToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ZoomInToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon_27_
         Me.ZoomInToolStripMenuItem.Name = "ZoomInToolStripMenuItem"
         Me.ZoomInToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Oemplus), System.Windows.Forms.Keys)
@@ -183,6 +212,8 @@ Partial Class Form1
         '
         'ZoomOutToolStripMenuItem
         '
+        Me.ZoomOutToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.ZoomOutToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ZoomOutToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon_26_
         Me.ZoomOutToolStripMenuItem.Name = "ZoomOutToolStripMenuItem"
         Me.ZoomOutToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.OemMinus), System.Windows.Forms.Keys)
@@ -191,6 +222,8 @@ Partial Class Form1
         '
         'ZoomTo100ToolStripMenuItem
         '
+        Me.ZoomTo100ToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.ZoomTo100ToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ZoomTo100ToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon_28_
         Me.ZoomTo100ToolStripMenuItem.Name = "ZoomTo100ToolStripMenuItem"
         Me.ZoomTo100ToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D0), System.Windows.Forms.Keys)
@@ -200,60 +233,74 @@ Partial Class Form1
         'FormatToolStripMenuItem
         '
         Me.FormatToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FontToolStripMenuItem, Me.TextColorToolStripMenuItem, Me.HighlightColorToolStripMenuItem, Me.WordWrapToolStripMenuItem})
+        Me.FormatToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.FormatToolStripMenuItem.Name = "FormatToolStripMenuItem"
         Me.FormatToolStripMenuItem.Size = New System.Drawing.Size(57, 20)
         Me.FormatToolStripMenuItem.Text = "Format"
         '
         'FontToolStripMenuItem
         '
+        Me.FontToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.FontToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.FontToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.textblack
         Me.FontToolStripMenuItem.Name = "FontToolStripMenuItem"
-        Me.FontToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.FontToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.FontToolStripMenuItem.Text = "Font..."
         '
         'TextColorToolStripMenuItem
         '
+        Me.TextColorToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.TextColorToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TextColorToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.text
         Me.TextColorToolStripMenuItem.Name = "TextColorToolStripMenuItem"
-        Me.TextColorToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.TextColorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.TextColorToolStripMenuItem.Text = "Text Color..."
         '
         'HighlightColorToolStripMenuItem
         '
+        Me.HighlightColorToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.HighlightColorToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.HighlightColorToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.bg
         Me.HighlightColorToolStripMenuItem.Name = "HighlightColorToolStripMenuItem"
-        Me.HighlightColorToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.HighlightColorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.HighlightColorToolStripMenuItem.Text = "Highlight Color..."
         '
         'WordWrapToolStripMenuItem
         '
+        Me.WordWrapToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.WordWrapToolStripMenuItem.Checked = True
         Me.WordWrapToolStripMenuItem.CheckOnClick = True
         Me.WordWrapToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.WordWrapToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.WordWrapToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon_18_
         Me.WordWrapToolStripMenuItem.Name = "WordWrapToolStripMenuItem"
-        Me.WordWrapToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.WordWrapToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.WordWrapToolStripMenuItem.Text = "Word Wrap"
         '
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WebsiteToolStripMenuItem, Me.AboutBasicTextEditorToolStripMenuItem})
+        Me.HelpToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "Help"
         '
         'WebsiteToolStripMenuItem
         '
+        Me.WebsiteToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.WebsiteToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.WebsiteToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon_5_
         Me.WebsiteToolStripMenuItem.Name = "WebsiteToolStripMenuItem"
-        Me.WebsiteToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
+        Me.WebsiteToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.WebsiteToolStripMenuItem.Text = "Website"
         '
         'AboutBasicTextEditorToolStripMenuItem
         '
+        Me.AboutBasicTextEditorToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.AboutBasicTextEditorToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.AboutBasicTextEditorToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon_6_
         Me.AboutBasicTextEditorToolStripMenuItem.Name = "AboutBasicTextEditorToolStripMenuItem"
-        Me.AboutBasicTextEditorToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
+        Me.AboutBasicTextEditorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AboutBasicTextEditorToolStripMenuItem.Text = "About Bexitor"
         '
         'RichTextBox1
@@ -263,8 +310,10 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RichTextBox1.AutoWordSelection = True
+        Me.RichTextBox1.BackColor = System.Drawing.SystemColors.WindowText
         Me.RichTextBox1.EnableAutoDragDrop = True
         Me.RichTextBox1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox1.ForeColor = System.Drawing.SystemColors.Window
         Me.RichTextBox1.Location = New System.Drawing.Point(0, 24)
         Me.RichTextBox1.Margin = New System.Windows.Forms.Padding(3, 3, 3, 25)
         Me.RichTextBox1.Name = "RichTextBox1"
@@ -296,6 +345,7 @@ Partial Class Form1
         '
         'StatusStrip1
         '
+        Me.StatusStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.ToolStripStatusLabel2, Me.ToolStripStatusLabel6, Me.ToolStripStatusLabel4})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 426)
         Me.StatusStrip1.Name = "StatusStrip1"
@@ -309,6 +359,7 @@ Partial Class Form1
             Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) _
             Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom), System.Windows.Forms.ToolStripStatusLabelBorderSides)
         Me.ToolStripStatusLabel1.BorderStyle = System.Windows.Forms.Border3DStyle.Sunken
+        Me.ToolStripStatusLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
         Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(56, 19)
         Me.ToolStripStatusLabel1.Text = "New File"
@@ -319,6 +370,7 @@ Partial Class Form1
             Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) _
             Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom), System.Windows.Forms.ToolStripStatusLabelBorderSides)
         Me.ToolStripStatusLabel2.BorderStyle = System.Windows.Forms.Border3DStyle.Sunken
+        Me.ToolStripStatusLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ToolStripStatusLabel2.Name = "ToolStripStatusLabel2"
         Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(61, 19)
         Me.ToolStripStatusLabel2.Text = "Plain Text"
@@ -329,15 +381,10 @@ Partial Class Form1
             Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) _
             Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom), System.Windows.Forms.ToolStripStatusLabelBorderSides)
         Me.ToolStripStatusLabel6.BorderStyle = System.Windows.Forms.Border3DStyle.Sunken
+        Me.ToolStripStatusLabel6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ToolStripStatusLabel6.Name = "ToolStripStatusLabel6"
         Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(138, 19)
         Me.ToolStripStatusLabel6.Text = "Tahoma, Regular, 9.75pt"
-        '
-        'ToolStripStatusLabel3
-        '
-        Me.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3"
-        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(120, 17)
-        Me.ToolStripStatusLabel3.Text = "ToolStripStatusLabel3"
         '
         'ToolStripStatusLabel4
         '
@@ -346,16 +393,24 @@ Partial Class Form1
         Me.ToolStripStatusLabel4.Text = "You should not be seeing this..."
         Me.ToolStripStatusLabel4.Visible = False
         '
+        'ToolStripStatusLabel3
+        '
+        Me.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3"
+        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(120, 17)
+        Me.ToolStripStatusLabel3.Text = "ToolStripStatusLabel3"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.HelpButton = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1

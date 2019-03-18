@@ -31,6 +31,8 @@ Partial Class Form3
         '
         'TextBox1
         '
+        Me.TextBox1.BackColor = System.Drawing.Color.Black
+        Me.TextBox1.ForeColor = System.Drawing.SystemColors.Info
         Me.TextBox1.Location = New System.Drawing.Point(51, 22)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(302, 20)
@@ -69,6 +71,7 @@ Partial Class Form3
         Me.AcceptButton = Me.Button1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.CancelButton = Me.Button3
         Me.ClientSize = New System.Drawing.Size(365, 112)
         Me.Controls.Add(Me.Button3)
@@ -76,6 +79,7 @@ Partial Class Form3
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
         Me.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False

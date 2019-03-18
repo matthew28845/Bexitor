@@ -32,7 +32,7 @@ Partial Class Form2
         'Button1
         '
         Me.Button1.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Button1.Location = New System.Drawing.Point(87, 157)
+        Me.Button1.Location = New System.Drawing.Point(87, 171)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 1
@@ -41,14 +41,17 @@ Partial Class Form2
         '
         'TextBox1
         '
+        Me.TextBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.TextBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TextBox1.Location = New System.Drawing.Point(12, 67)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(224, 84)
+        Me.TextBox1.Size = New System.Drawing.Size(224, 98)
         Me.TextBox1.TabIndex = 2
-        Me.TextBox1.Text = "Bexitor, basic text editor " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Version 4.0.0 by Matthew Sigmond (matthew28845)" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Som" &
-    "e icons by Nick Nakashima" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Built on March 11, 2019" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bexitor is free software."
+        Me.TextBox1.Text = "Bexitor, basic text editor " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Version 4.0.0 by Matthew Sigmond (matthew28845)" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Cus" &
+    "tom purple theme for Lunarixus" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Some icons by Nick Nakashima" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Built on March 17," &
+    " 2019" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bexitor is free software."
         Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'PictureBox1
@@ -65,11 +68,13 @@ Partial Class Form2
         Me.AcceptButton = Me.Button1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.CancelButton = Me.Button1
-        Me.ClientSize = New System.Drawing.Size(249, 191)
+        Me.ClientSize = New System.Drawing.Size(249, 203)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox1)
+        Me.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form2"
