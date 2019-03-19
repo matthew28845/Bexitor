@@ -314,17 +314,20 @@ Public Class Form1
     Private Sub ZoomInToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZoomInToolStripMenuItem.Click
         If RichTextBox1.ZoomFactor < 63.867 Then
             RichTextBox1.ZoomFactor = (RichTextBox1.ZoomFactor + 0.1)
+            ToolStripStatusLabel5.Text = ((RichTextBox1.ZoomFactor * 100) & "%")
         End If
     End Sub
 
     Private Sub ZoomOutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZoomOutToolStripMenuItem.Click
         If RichTextBox1.ZoomFactor > 0.115 Then
             RichTextBox1.ZoomFactor = (RichTextBox1.ZoomFactor - 0.1)
+            ToolStripStatusLabel5.Text = ((RichTextBox1.ZoomFactor * 100) & "%")
         End If
     End Sub
 
     Private Sub ZoomTo100ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZoomTo100ToolStripMenuItem.Click
         RichTextBox1.ZoomFactor = 1
+        ToolStripStatusLabel5.Text = "100%"
     End Sub
 
     Private Sub ToolStripStatusLabel6_Click(sender As Object, e As EventArgs) Handles ToolStripStatusLabel6.Click
