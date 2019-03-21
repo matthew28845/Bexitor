@@ -32,6 +32,11 @@ Bexitor
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Bexitor.My.Resources.Resources.BexitorHires">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Bexitor.My.Resources.Resources.bg">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

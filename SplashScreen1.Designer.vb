@@ -79,7 +79,7 @@ Partial Class SplashScreen1
         Me.Version.Name = "Version"
         Me.Version.Size = New System.Drawing.Size(241, 20)
         Me.Version.TabIndex = 1
-        Me.Version.Text = "Version 4.0.0"
+        Me.Version.Text = "Version 4.1.0"
         '
         'Copyright
         '
@@ -90,22 +90,21 @@ Partial Class SplashScreen1
         Me.Copyright.Name = "Copyright"
         Me.Copyright.Size = New System.Drawing.Size(241, 40)
         Me.Copyright.TabIndex = 2
-        Me.Copyright.Text = "Copyright 2019 matthew28845"
+        Me.Copyright.Text = "by Matthew Sigmond (matthew28845)"
         '
         'ApplicationTitle
         '
         Me.ApplicationTitle.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.ApplicationTitle.BackColor = System.Drawing.Color.Transparent
-        Me.ApplicationTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ApplicationTitle.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ApplicationTitle.Image = Global.Bexitor.My.Resources.Resources.BexitorBanner
+        Me.ApplicationTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ApplicationTitle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.ApplicationTitle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ApplicationTitle.Location = New System.Drawing.Point(246, 3)
         Me.ApplicationTitle.Name = "ApplicationTitle"
         Me.ApplicationTitle.Size = New System.Drawing.Size(247, 212)
         Me.ApplicationTitle.TabIndex = 0
-        Me.ApplicationTitle.Text = "     "
-        Me.ApplicationTitle.TextAlign = System.Drawing.ContentAlignment.TopRight
+        Me.ApplicationTitle.Text = "Bexitor"
+        Me.ApplicationTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'SplashScreen1
         '

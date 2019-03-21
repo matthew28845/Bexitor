@@ -32,7 +32,7 @@ Partial Class Form2
         'Button1
         '
         Me.Button1.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Button1.Location = New System.Drawing.Point(87, 157)
+        Me.Button1.Location = New System.Drawing.Point(98, 157)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 1
@@ -41,7 +41,7 @@ Partial Class Form2
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(12, 67)
+        Me.TextBox1.Location = New System.Drawing.Point(18, 67)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
@@ -54,7 +54,7 @@ Partial Class Form2
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Bexitor.My.Resources.Resources.BexitorBanner
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox1.Location = New System.Drawing.Point(18, 13)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(224, 48)
         Me.PictureBox1.TabIndex = 0
@@ -65,8 +65,9 @@ Partial Class Form2
         Me.AcceptButton = Me.Button1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.CancelButton = Me.Button1
-        Me.ClientSize = New System.Drawing.Size(249, 191)
+        Me.ClientSize = New System.Drawing.Size(254, 191)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox1)
