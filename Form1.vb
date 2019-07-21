@@ -344,14 +344,6 @@ Public Class Form1
             Clipboard.SetImage(ImageChosen)
             RichTextBox1.Paste()
             Clipboard.SetDataObject(oldClipBoard)
-            If RichTextBox1.WordWrap = True Then
-                RichTextBox1.WordWrap = False
-                RichTextBox1.WordWrap = True
-            End If
-            If RichTextBox1.WordWrap = False Then
-                RichTextBox1.WordWrap = True
-                RichTextBox1.WordWrap = False
-            End If
         End If
     End Sub
 
