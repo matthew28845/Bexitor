@@ -80,6 +80,14 @@
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -223,6 +231,8 @@
   <ItemGroup>
     <Content Include="Bexitor.ico" />
     <Content Include="favicon%287%29.ico" />
+    <None Include="Resources\favicon%2825%29.ico" />
+    <None Include="Resources\favicon%2832%29.ico" />
     <None Include="Resources\BexitorHires.png" />
     <None Include="Resources\favicon%2828%29.ico" />
     <None Include="Resources\favicon%2827%29.ico" />

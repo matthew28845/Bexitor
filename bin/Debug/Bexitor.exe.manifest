@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Bexitor.exe" size="359872">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Bexitor.exe" size="361920">
       <assemblyIdentity name="Bexitor" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>1iiz0XytfsaYIPv8bhGZPYPj6Wo=</dsig:DigestValue>
+        <dsig:DigestValue>BmTHUzGyz/55DVVWT8YFqzlhn70=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

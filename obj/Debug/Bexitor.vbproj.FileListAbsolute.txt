@@ -34,3 +34,24 @@ C:\Users\Matthew\Documents\GitHub\Bexitor\obj\Debug\Bexitor.xml
 C:\Users\Matthew\Documents\GitHub\Bexitor\obj\Debug\Bexitor.pdb
 C:\Users\Matthew\Documents\GitHub\Bexitor\obj\Debug\Bexitor.SplashScreen1.resources
 C:\Users\Matthew\Documents\GitHub\Bexitor\obj\Debug\Bexitor.AboutBox1.resources
+C:\Users\Matthew\source\repos\Basic Text Editor\Basic Text Editor\obj\Debug\Bexitor.AboutBox1.resources
+C:\Users\Matthew\source\repos\Basic Text Editor\Basic Text Editor\obj\Debug\Bexitor.SplashScreen1.resources
+C:\Users\Matthew.000\source\repos\Basic Text Editor\Basic Text Editor\obj\Debug\Bexitor.vbprojAssemblyReference.cache
+C:\Users\Matthew.000\source\repos\Basic Text Editor\Basic Text Editor\obj\Debug\Bexitor.AboutBox1.resources
+C:\Users\Matthew.000\source\repos\Basic Text Editor\Basic Text Editor\obj\Debug\Bexitor.Form1.resources
+C:\Users\Matthew.000\source\repos\Basic Text Editor\Basic Text Editor\obj\Debug\Bexitor.Form2.resources
+C:\Users\Matthew.000\source\repos\Basic Text Editor\Basic Text Editor\obj\Debug\Bexitor.Form3.resources
+C:\Users\Matthew.000\source\repos\Basic Text Editor\Basic Text Editor\obj\Debug\Bexitor.Resources.resources
+C:\Users\Matthew.000\source\repos\Basic Text Editor\Basic Text Editor\obj\Debug\Bexitor.SplashScreen1.resources
+C:\Users\Matthew.000\source\repos\Basic Text Editor\Basic Text Editor\obj\Debug\Bexitor.vbproj.GenerateResource.cache
+C:\Users\Matthew.000\source\repos\Basic Text Editor\Basic Text Editor\obj\Debug\Bexitor.vbproj.CoreCompileInputs.cache
+C:\Users\Matthew.000\source\repos\Basic Text Editor\Basic Text Editor\obj\Debug\Bexitor.exe
+C:\Users\Matthew.000\source\repos\Basic Text Editor\Basic Text Editor\obj\Debug\Bexitor.xml
+C:\Users\Matthew.000\source\repos\Basic Text Editor\Basic Text Editor\obj\Debug\Bexitor.pdb
+C:\Users\Matthew.000\source\repos\Basic Text Editor\Basic Text Editor\bin\Debug\Bexitor.exe.manifest
+C:\Users\Matthew.000\source\repos\Basic Text Editor\Basic Text Editor\bin\Debug\Bexitor.application
+C:\Users\Matthew.000\source\repos\Basic Text Editor\Basic Text Editor\bin\Debug\Bexitor.exe
+C:\Users\Matthew.000\source\repos\Basic Text Editor\Basic Text Editor\bin\Debug\Bexitor.pdb
+C:\Users\Matthew.000\source\repos\Basic Text Editor\Basic Text Editor\bin\Debug\Bexitor.xml
+C:\Users\Matthew.000\source\repos\Basic Text Editor\Basic Text Editor\obj\Debug\Bexitor.exe.manifest
+C:\Users\Matthew.000\source\repos\Basic Text Editor\Basic Text Editor\obj\Debug\Bexitor.application

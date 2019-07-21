@@ -1,13 +1,6 @@
 ﻿Imports System.IO
 Imports System.IO.StreamReader
 Public Class Form1
-    Private Sub HelpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HelpToolStripMenuItem.Click
-
-    End Sub
-
-    Private Sub RichTextBox1_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
 
     Private Sub WebsiteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WebsiteToolStripMenuItem.Click
         Process.Start("http://matthew28845.x10.mx/bexitor.html")
@@ -15,14 +8,6 @@ Public Class Form1
 
     Private Sub AboutBasicTextEditorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutBasicTextEditorToolStripMenuItem.Click
         Form2.Show()
-    End Sub
-
-    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
-
-    End Sub
-
-    Private Sub FileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FileToolStripMenuItem.Click
-
     End Sub
 
     Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
@@ -46,8 +31,8 @@ Public Class Form1
                     ToolStripStatusLabel1.Text = File2Save
                     If SaveFile.FileName.EndsWith(".rtf") Then
                         ToolStripStatusLabel1.Text = File2Save
-                        ToolStripStatusLabel6.Text = RichTextBox1.SelectionFont.Name & ", " & FontStyle & ", " & RichTextBox1.SelectionFont.SizeInPoints & "pt"
-                    ElseIf SaveFile.Filename Then
+                        ToolStripStatusLabel6.Text = RichTextBox1.SelectionFont.Name & ", " & FontStyle & ", " & Math.Round(RichTextBox1.SelectionFont.SizeInPoints) & "pt"
+                    ElseIf SaveFile.FileName Then
                         ToolStripStatusLabel1.Text = File2Save
                         ToolStripStatusLabel2.Text = "Plain Text"
                         If RichTextBox1.SelectionFont.Style = 0 Then
@@ -66,20 +51,20 @@ Public Class Form1
                                 FontStyle = "Bold And Italic"
                             End If
                         End If
-                        ToolStripStatusLabel6.Text = RichTextBox1.SelectionFont.Name & ", " & FontStyle & ", " & RichTextBox1.SelectionFont.SizeInPoints & "pt"
+                        ToolStripStatusLabel6.Text = RichTextBox1.SelectionFont.Name & ", " & FontStyle & ", " & Math.Round(RichTextBox1.SelectionFont.SizeInPoints) & "pt"
                     Else
                         ToolStripStatusLabel1.Text = File2Save
                         ToolStripStatusLabel2.Text = "Plain Text"
-                            If RichTextBox1.SelectionFont.Style = 0 Then
-                                FontStyle = "Regular"
-                            ElseIf RichTextBox1.SelectionFont.Style = 1 Then
-                                FontStyle = "Bold"
-                            ElseIf RichTextBox1.SelectionFont.Style = 2 Then
-                                FontStyle = "Italic"
-                            Else
-                                FontStyle = "Bold And Italic"
-                            End If
-                            ToolStripStatusLabel6.Text = RichTextBox1.SelectionFont.Name & ", " & FontStyle & ", " & RichTextBox1.SelectionFont.SizeInPoints & "pt"
+                        If RichTextBox1.SelectionFont.Style = 0 Then
+                            FontStyle = "Regular"
+                        ElseIf RichTextBox1.SelectionFont.Style = 1 Then
+                            FontStyle = "Bold"
+                        ElseIf RichTextBox1.SelectionFont.Style = 2 Then
+                            FontStyle = "Italic"
+                        Else
+                            FontStyle = "Bold And Italic"
+                        End If
+                        ToolStripStatusLabel6.Text = RichTextBox1.SelectionFont.Name & ", " & FontStyle & ", " & Math.Round(RichTextBox1.SelectionFont.SizeInPoints) & "pt"
                     End If
                 ElseIf SaveOrNo = Windows.Forms.DialogResult.No Then
                     RichTextBox1.Clear()
@@ -105,7 +90,7 @@ Public Class Form1
                 Else
                     FontStyle = "Bold And Italic"
                 End If
-                ToolStripStatusLabel6.Text = RichTextBox1.SelectionFont.Name & ", " & FontStyle & ", " & RichTextBox1.SelectionFont.SizeInPoints & "pt"
+                ToolStripStatusLabel6.Text = RichTextBox1.SelectionFont.Name & ", " & FontStyle & ", " & Math.Round(RichTextBox1.SelectionFont.SizeInPoints) & "pt"
                 Label1.Text = "new"
             End If
         Else
@@ -122,7 +107,7 @@ Public Class Form1
             Else
                 FontStyle = "Bold And Italic"
             End If
-            ToolStripStatusLabel6.Text = RichTextBox1.SelectionFont.Name & ", " & FontStyle & ", " & RichTextBox1.SelectionFont.SizeInPoints & "pt"
+            ToolStripStatusLabel6.Text = RichTextBox1.SelectionFont.Name & ", " & FontStyle & ", " & Math.Round(RichTextBox1.SelectionFont.SizeInPoints) & "pt"
             Label1.Text = "new"
         End If
     End Sub
@@ -153,7 +138,7 @@ Public Class Form1
                 Else
                     FontStyle = "Bold And Italic"
                 End If
-                ToolStripStatusLabel6.Text = RichTextBox1.SelectionFont.Name & ", " & FontStyle & ", " & RichTextBox1.SelectionFont.SizeInPoints & "pt"
+                ToolStripStatusLabel6.Text = RichTextBox1.SelectionFont.Name & ", " & FontStyle & ", " & Math.Round(RichTextBox1.SelectionFont.SizeInPoints) & "pt"
                 Label1.Text = Filename
             Else
                 Filename = OpenFile.FileName
@@ -170,7 +155,7 @@ Public Class Form1
                 Else
                     FontStyle = "Bold And Italic"
                 End If
-                ToolStripStatusLabel6.Text = RichTextBox1.SelectionFont.Name & ", " & FontStyle & ", " & RichTextBox1.SelectionFont.SizeInPoints & "pt"
+                ToolStripStatusLabel6.Text = RichTextBox1.SelectionFont.Name & ", " & FontStyle & ", " & Math.Round(RichTextBox1.SelectionFont.SizeInPoints) & "pt"
                 Label1.Text = Filename
             End If
         End If
@@ -180,6 +165,7 @@ Public Class Form1
         If Label1.Text = "new" Then
             Dim SaveFile As SaveFileDialog = New SaveFileDialog()
             Dim File2Save As String
+            File2Save = ""
             SaveFile.Title = "Choose a location and name to save as."
             SaveFile.InitialDirectory = "%Documents%"
             SaveFile.Filter = "Rich text files (*.rtf)|*.rtf|Text files (*.txt)|*.txt|All files (*.*)|*.*"
@@ -256,10 +242,6 @@ Public Class Form1
         RichTextBox1.Undo()
     End Sub
 
-    Private Sub WordWrapToolStripMenuItem_EnabledChanged(sender As Object, e As EventArgs) Handles WordWrapToolStripMenuItem.EnabledChanged
-
-    End Sub
-
     Private Sub WordWrapToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WordWrapToolStripMenuItem.Click
         If WordWrapToolStripMenuItem.Checked = True Then
             RichTextBox1.WordWrap = True
@@ -312,30 +294,26 @@ Public Class Form1
     End Sub
 
     Private Sub ZoomInToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZoomInToolStripMenuItem.Click
+        Dim ZoomPercent As Integer
         If RichTextBox1.ZoomFactor < 63.867 Then
             RichTextBox1.ZoomFactor = (RichTextBox1.ZoomFactor + 0.1)
-            ToolStripStatusLabel5.Text = ((RichTextBox1.ZoomFactor * 100) & "%")
+            ZoomPercent = Math.Round(RichTextBox1.ZoomFactor * 100)
+            ToolStripStatusLabel5.Text = (ZoomPercent & "% Zoom")
         End If
     End Sub
 
     Private Sub ZoomOutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZoomOutToolStripMenuItem.Click
+        Dim ZoomPercent As Integer
         If RichTextBox1.ZoomFactor > 0.115 Then
             RichTextBox1.ZoomFactor = (RichTextBox1.ZoomFactor - 0.1)
-            ToolStripStatusLabel5.Text = ((RichTextBox1.ZoomFactor * 100) & "%")
+            ZoomPercent = Math.Round(RichTextBox1.ZoomFactor * 100)
+            ToolStripStatusLabel5.Text = (ZoomPercent & "% Zoom")
         End If
     End Sub
 
     Private Sub ZoomTo100ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZoomTo100ToolStripMenuItem.Click
         RichTextBox1.ZoomFactor = 1
-        ToolStripStatusLabel5.Text = "100%"
-    End Sub
-
-    Private Sub ToolStripStatusLabel6_Click(sender As Object, e As EventArgs) Handles ToolStripStatusLabel6.Click
-
-    End Sub
-
-    Private Sub StatusStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles StatusStrip1.ItemClicked
-
+        ToolStripStatusLabel5.Text = "100% Zoom"
     End Sub
 
     Private Sub RichTextBox1_TextChanged_1(sender As Object, e As EventArgs) Handles RichTextBox1.SelectionChanged
@@ -349,6 +327,35 @@ Public Class Form1
         Else
             FontStyle = "Bold And Italic"
         End If
-        ToolStripStatusLabel6.Text = RichTextBox1.SelectionFont.Name & ", " & FontStyle & ", " & RichTextBox1.SelectionFont.SizeInPoints & "pt"
+        ToolStripStatusLabel6.Text = RichTextBox1.SelectionFont.Name & ", " & FontStyle & ", " & Math.Round(RichTextBox1.SelectionFont.SizeInPoints) & "pt"
+        Dim index As Int32 = RichTextBox1.SelectionStart
+        Dim currentline As Int32 = RichTextBox1.GetLineFromCharIndex(index) + 1
+        Dim currentcolumn As Int32 = index - RichTextBox1.GetFirstCharIndexOfCurrentLine() + 1
+        ToolStripStatusLabel7.Text = "Ln " & currentline & ", Col " & currentcolumn
+    End Sub
+
+    Private Sub ImageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ImageToolStripMenuItem.Click
+        Dim ImageChosen As Image
+        Dim PickImage = New OpenFileDialog
+        Dim oldClipBoard = Clipboard.GetDataObject
+        PickImage.Filter = "Common image files (*.png, *.jpg, *.jpeg, *.gif, *.bmp)|*.png;*.jpg;*.jpeg;*.gif;*.bmp|All files (*.*)|*.*"
+        If PickImage.ShowDialog() = DialogResult.OK Then
+            ImageChosen = Image.FromFile(PickImage.FileName)
+            Clipboard.SetImage(ImageChosen)
+            RichTextBox1.Paste()
+            Clipboard.SetDataObject(oldClipBoard)
+            If RichTextBox1.WordWrap = True Then
+                RichTextBox1.WordWrap = False
+                RichTextBox1.WordWrap = True
+            End If
+            If RichTextBox1.WordWrap = False Then
+                RichTextBox1.WordWrap = True
+                RichTextBox1.WordWrap = False
+            End If
+        End If
+    End Sub
+
+    Private Sub RedoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RedoToolStripMenuItem.Click
+        RichTextBox1.Redo()
     End Sub
 End Class

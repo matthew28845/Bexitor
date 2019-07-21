@@ -127,6 +127,11 @@ Bexitor
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Bexitor.My.Resources.Resources.favicon_25_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Bexitor.My.Resources.Resources.favicon_26_">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -138,6 +143,11 @@ Bexitor
 </summary>
 </member>
 <member name="P:Bexitor.My.Resources.Resources.favicon_28_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Bexitor.My.Resources.Resources.favicon_32_">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
