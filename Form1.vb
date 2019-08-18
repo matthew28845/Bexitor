@@ -120,7 +120,7 @@ Public Class Form1
         OpenFile.Title = "Open a Text File"
         OpenFile.InitialDirectory = "%Documents%"
         OpenFile.Filter = "Rich text files (*.rtf)|*.rtf|Text files (*.txt)|*.txt|All files (*.*)|*.*"
-        OpenFile.FilterIndex = 1
+        OpenFile.FilterIndex = 3
         OpenFile.RestoreDirectory = True
         If OpenFile.ShowDialog() = DialogResult.OK Then
             If OpenFile.FileName.EndsWith(".rtf") Then

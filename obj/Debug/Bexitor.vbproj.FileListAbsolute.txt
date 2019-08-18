@@ -55,3 +55,22 @@ C:\Users\Matthew.000\source\repos\Basic Text Editor\Basic Text Editor\bin\Debug\
 C:\Users\Matthew.000\source\repos\Basic Text Editor\Basic Text Editor\bin\Debug\Bexitor.xml
 C:\Users\Matthew.000\source\repos\Basic Text Editor\Basic Text Editor\obj\Debug\Bexitor.exe.manifest
 C:\Users\Matthew.000\source\repos\Basic Text Editor\Basic Text Editor\obj\Debug\Bexitor.application
+C:\Users\matth\Documents\GitHub\Bexitor\bin\Debug\Bexitor.exe.manifest
+C:\Users\matth\Documents\GitHub\Bexitor\bin\Debug\Bexitor.application
+C:\Users\matth\Documents\GitHub\Bexitor\bin\Debug\Bexitor.exe
+C:\Users\matth\Documents\GitHub\Bexitor\bin\Debug\Bexitor.pdb
+C:\Users\matth\Documents\GitHub\Bexitor\bin\Debug\Bexitor.xml
+C:\Users\matth\Documents\GitHub\Bexitor\obj\Debug\Bexitor.vbprojAssemblyReference.cache
+C:\Users\matth\Documents\GitHub\Bexitor\obj\Debug\Bexitor.AboutBox1.resources
+C:\Users\matth\Documents\GitHub\Bexitor\obj\Debug\Bexitor.Form1.resources
+C:\Users\matth\Documents\GitHub\Bexitor\obj\Debug\Bexitor.Form2.resources
+C:\Users\matth\Documents\GitHub\Bexitor\obj\Debug\Bexitor.Form3.resources
+C:\Users\matth\Documents\GitHub\Bexitor\obj\Debug\Bexitor.Resources.resources
+C:\Users\matth\Documents\GitHub\Bexitor\obj\Debug\Bexitor.SplashScreen1.resources
+C:\Users\matth\Documents\GitHub\Bexitor\obj\Debug\Bexitor.vbproj.GenerateResource.cache
+C:\Users\matth\Documents\GitHub\Bexitor\obj\Debug\Bexitor.vbproj.CoreCompileInputs.cache
+C:\Users\matth\Documents\GitHub\Bexitor\obj\Debug\Bexitor.exe.manifest
+C:\Users\matth\Documents\GitHub\Bexitor\obj\Debug\Bexitor.application
+C:\Users\matth\Documents\GitHub\Bexitor\obj\Debug\Bexitor.exe
+C:\Users\matth\Documents\GitHub\Bexitor\obj\Debug\Bexitor.xml
+C:\Users\matth\Documents\GitHub\Bexitor\obj\Debug\Bexitor.pdb

@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Bexitor.exe" size="361920">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Bexitor.exe" size="362432">
       <assemblyIdentity name="Bexitor" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>lYhm5D7ta3DjthJhG3CzcTzkh4I=</dsig:DigestValue>
+        <dsig:DigestValue>7og8aavS4DIN3wlsyDy/34tbHh4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -89,4 +89,9 @@
       <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
     </application>
   </compatibility>
+  <application xmlns="urn:schemas-microsoft-com:asm.v3">
+    <windowsSettings>
+      <dpiAware xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">true</dpiAware>
+    </windowsSettings>
+  </application>
 </asmv1:assembly>
