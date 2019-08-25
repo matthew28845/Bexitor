@@ -167,7 +167,107 @@ Bexitor
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Bexitor.My.Resources.Resources.lc_copy">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Bexitor.My.Resources.Resources.lc_cut">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Bexitor.My.Resources.Resources.lc_insertgraphic">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Bexitor.My.Resources.Resources.lc_newdoc">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Bexitor.My.Resources.Resources.lc_open">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Bexitor.My.Resources.Resources.lc_outlinefont">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Bexitor.My.Resources.Resources.lc_paste">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Bexitor.My.Resources.Resources.lc_redo">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Bexitor.My.Resources.Resources.lc_save">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Bexitor.My.Resources.Resources.lc_saveas">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Bexitor.My.Resources.Resources.lc_searchdialog">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Bexitor.My.Resources.Resources.lc_selectall">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Bexitor.My.Resources.Resources.lc_text">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Bexitor.My.Resources.Resources.lc_textattributes">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Bexitor.My.Resources.Resources.lc_undo">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Bexitor.My.Resources.Resources.lc_wraptext">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Bexitor.My.Resources.Resources.lc_zoomin">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Bexitor.My.Resources.Resources.lc_zoomoptimal">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Bexitor.My.Resources.Resources.lc_zoomout">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Bexitor.My.Resources.Resources.load">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Bexitor.My.Resources.Resources.newdoc">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -178,6 +278,16 @@ Bexitor
 </summary>
 </member>
 <member name="P:Bexitor.My.Resources.Resources.save">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Bexitor.My.Resources.Resources.sc_backgroundcolor">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Bexitor.My.Resources.Resources.sc_browseview">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -193,6 +303,11 @@ Bexitor
 </summary>
 </member>
 <member name="P:Bexitor.My.Resources.Resources.textblack">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Bexitor.My.Resources.Resources.tip_small">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

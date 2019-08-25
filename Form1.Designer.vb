@@ -25,32 +25,11 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SaveAsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CopyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PasteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SelectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UndoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RedoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FindToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ZoomInToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ZoomOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ZoomTo100ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FormatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FontToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TextColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HighlightColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.WordWrapToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InsertToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ImageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.WebsiteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AboutBasicTextEditorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -62,6 +41,27 @@ Partial Class Form1
         Me.ToolStripStatusLabel7 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel4 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SaveAsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CopyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PasteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SelectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UndoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RedoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FindToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ZoomInToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ZoomOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ZoomTo100ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FontToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TextColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HighlightColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.WordWrapToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ImageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.WebsiteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutBasicTextEditorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -84,101 +84,12 @@ Partial Class Form1
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(46, 24)
         Me.FileToolStripMenuItem.Text = "File"
         '
-        'NewToolStripMenuItem
-        '
-        Me.NewToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources._new
-        Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
-        Me.NewToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(233, 26)
-        Me.NewToolStripMenuItem.Text = "New"
-        '
-        'OpenToolStripMenuItem
-        '
-        Me.OpenToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.load
-        Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(233, 26)
-        Me.OpenToolStripMenuItem.Text = "Open"
-        '
-        'SaveToolStripMenuItem
-        '
-        Me.SaveToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon__3_
-        Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(233, 26)
-        Me.SaveToolStripMenuItem.Text = "Save"
-        '
-        'SaveAsToolStripMenuItem
-        '
-        Me.SaveAsToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon__4_
-        Me.SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem"
-        Me.SaveAsToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
-            Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(233, 26)
-        Me.SaveAsToolStripMenuItem.Text = "Save As"
-        '
         'EditToolStripMenuItem
         '
         Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CutToolStripMenuItem, Me.CopyToolStripMenuItem, Me.PasteToolStripMenuItem, Me.SelectAllToolStripMenuItem, Me.UndoToolStripMenuItem, Me.RedoToolStripMenuItem, Me.FindToolStripMenuItem})
         Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
         Me.EditToolStripMenuItem.Size = New System.Drawing.Size(49, 24)
         Me.EditToolStripMenuItem.Text = "Edit"
-        '
-        'CutToolStripMenuItem
-        '
-        Me.CutToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.cut
-        Me.CutToolStripMenuItem.Name = "CutToolStripMenuItem"
-        Me.CutToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
-        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(206, 26)
-        Me.CutToolStripMenuItem.Text = "Cut"
-        '
-        'CopyToolStripMenuItem
-        '
-        Me.CopyToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.copy
-        Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
-        Me.CopyToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
-        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(206, 26)
-        Me.CopyToolStripMenuItem.Text = "Copy"
-        '
-        'PasteToolStripMenuItem
-        '
-        Me.PasteToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.paste
-        Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
-        Me.PasteToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.V), System.Windows.Forms.Keys)
-        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(206, 26)
-        Me.PasteToolStripMenuItem.Text = "Paste"
-        '
-        'SelectAllToolStripMenuItem
-        '
-        Me.SelectAllToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon_16_
-        Me.SelectAllToolStripMenuItem.Name = "SelectAllToolStripMenuItem"
-        Me.SelectAllToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
-        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(206, 26)
-        Me.SelectAllToolStripMenuItem.Text = "Select All"
-        '
-        'UndoToolStripMenuItem
-        '
-        Me.UndoToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon_17_
-        Me.UndoToolStripMenuItem.Name = "UndoToolStripMenuItem"
-        Me.UndoToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Z), System.Windows.Forms.Keys)
-        Me.UndoToolStripMenuItem.Size = New System.Drawing.Size(206, 26)
-        Me.UndoToolStripMenuItem.Text = "Undo"
-        '
-        'RedoToolStripMenuItem
-        '
-        Me.RedoToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon_25_
-        Me.RedoToolStripMenuItem.Name = "RedoToolStripMenuItem"
-        Me.RedoToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Y), System.Windows.Forms.Keys)
-        Me.RedoToolStripMenuItem.Size = New System.Drawing.Size(206, 26)
-        Me.RedoToolStripMenuItem.Text = "Redo"
-        '
-        'FindToolStripMenuItem
-        '
-        Me.FindToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon_19_
-        Me.FindToolStripMenuItem.Name = "FindToolStripMenuItem"
-        Me.FindToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F), System.Windows.Forms.Keys)
-        Me.FindToolStripMenuItem.Size = New System.Drawing.Size(206, 26)
-        Me.FindToolStripMenuItem.Text = "Find..."
         '
         'ViewToolStripMenuItem
         '
@@ -187,69 +98,12 @@ Partial Class Form1
         Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(55, 24)
         Me.ViewToolStripMenuItem.Text = "View"
         '
-        'ZoomInToolStripMenuItem
-        '
-        Me.ZoomInToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon_27_
-        Me.ZoomInToolStripMenuItem.Name = "ZoomInToolStripMenuItem"
-        Me.ZoomInToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+Plus"
-        Me.ZoomInToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Oemplus), System.Windows.Forms.Keys)
-        Me.ZoomInToolStripMenuItem.Size = New System.Drawing.Size(241, 26)
-        Me.ZoomInToolStripMenuItem.Text = "Zoom In"
-        '
-        'ZoomOutToolStripMenuItem
-        '
-        Me.ZoomOutToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon_26_
-        Me.ZoomOutToolStripMenuItem.Name = "ZoomOutToolStripMenuItem"
-        Me.ZoomOutToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+Minus"
-        Me.ZoomOutToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.OemMinus), System.Windows.Forms.Keys)
-        Me.ZoomOutToolStripMenuItem.Size = New System.Drawing.Size(241, 26)
-        Me.ZoomOutToolStripMenuItem.Text = "Zoom Out"
-        '
-        'ZoomTo100ToolStripMenuItem
-        '
-        Me.ZoomTo100ToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon_28_
-        Me.ZoomTo100ToolStripMenuItem.Name = "ZoomTo100ToolStripMenuItem"
-        Me.ZoomTo100ToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D0), System.Windows.Forms.Keys)
-        Me.ZoomTo100ToolStripMenuItem.Size = New System.Drawing.Size(241, 26)
-        Me.ZoomTo100ToolStripMenuItem.Text = "Zoom to 100%"
-        '
         'FormatToolStripMenuItem
         '
         Me.FormatToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FontToolStripMenuItem, Me.TextColorToolStripMenuItem, Me.HighlightColorToolStripMenuItem, Me.WordWrapToolStripMenuItem})
         Me.FormatToolStripMenuItem.Name = "FormatToolStripMenuItem"
         Me.FormatToolStripMenuItem.Size = New System.Drawing.Size(70, 24)
         Me.FormatToolStripMenuItem.Text = "Format"
-        '
-        'FontToolStripMenuItem
-        '
-        Me.FontToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.textblack
-        Me.FontToolStripMenuItem.Name = "FontToolStripMenuItem"
-        Me.FontToolStripMenuItem.Size = New System.Drawing.Size(203, 26)
-        Me.FontToolStripMenuItem.Text = "Font..."
-        '
-        'TextColorToolStripMenuItem
-        '
-        Me.TextColorToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.text
-        Me.TextColorToolStripMenuItem.Name = "TextColorToolStripMenuItem"
-        Me.TextColorToolStripMenuItem.Size = New System.Drawing.Size(203, 26)
-        Me.TextColorToolStripMenuItem.Text = "Text Color..."
-        '
-        'HighlightColorToolStripMenuItem
-        '
-        Me.HighlightColorToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.bg
-        Me.HighlightColorToolStripMenuItem.Name = "HighlightColorToolStripMenuItem"
-        Me.HighlightColorToolStripMenuItem.Size = New System.Drawing.Size(203, 26)
-        Me.HighlightColorToolStripMenuItem.Text = "Highlight Color..."
-        '
-        'WordWrapToolStripMenuItem
-        '
-        Me.WordWrapToolStripMenuItem.Checked = True
-        Me.WordWrapToolStripMenuItem.CheckOnClick = True
-        Me.WordWrapToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.WordWrapToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon_18_
-        Me.WordWrapToolStripMenuItem.Name = "WordWrapToolStripMenuItem"
-        Me.WordWrapToolStripMenuItem.Size = New System.Drawing.Size(203, 26)
-        Me.WordWrapToolStripMenuItem.Text = "Word Wrap"
         '
         'InsertToolStripMenuItem
         '
@@ -258,13 +112,6 @@ Partial Class Form1
         Me.InsertToolStripMenuItem.Size = New System.Drawing.Size(59, 24)
         Me.InsertToolStripMenuItem.Text = "Insert"
         '
-        'ImageToolStripMenuItem
-        '
-        Me.ImageToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon_32_
-        Me.ImageToolStripMenuItem.Name = "ImageToolStripMenuItem"
-        Me.ImageToolStripMenuItem.Size = New System.Drawing.Size(143, 26)
-        Me.ImageToolStripMenuItem.Text = "Image..."
-        '
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.AutoSize = False
@@ -272,20 +119,6 @@ Partial Class Form1
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(55, 24)
         Me.HelpToolStripMenuItem.Text = "Help"
-        '
-        'WebsiteToolStripMenuItem
-        '
-        Me.WebsiteToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon_5_
-        Me.WebsiteToolStripMenuItem.Name = "WebsiteToolStripMenuItem"
-        Me.WebsiteToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.WebsiteToolStripMenuItem.Text = "Website"
-        '
-        'AboutBasicTextEditorToolStripMenuItem
-        '
-        Me.AboutBasicTextEditorToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.favicon_6_
-        Me.AboutBasicTextEditorToolStripMenuItem.Name = "AboutBasicTextEditorToolStripMenuItem"
-        Me.AboutBasicTextEditorToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.AboutBasicTextEditorToolStripMenuItem.Text = "About Bexitor"
         '
         'RichTextBox1
         '
@@ -403,6 +236,173 @@ Partial Class Form1
         Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(120, 17)
         Me.ToolStripStatusLabel3.Text = "ToolStripStatusLabel3"
         '
+        'NewToolStripMenuItem
+        '
+        Me.NewToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.lc_newdoc
+        Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
+        Me.NewToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(233, 26)
+        Me.NewToolStripMenuItem.Text = "New"
+        '
+        'OpenToolStripMenuItem
+        '
+        Me.OpenToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.lc_open
+        Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
+        Me.OpenToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(233, 26)
+        Me.OpenToolStripMenuItem.Text = "Open"
+        '
+        'SaveToolStripMenuItem
+        '
+        Me.SaveToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.lc_save
+        Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
+        Me.SaveToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(233, 26)
+        Me.SaveToolStripMenuItem.Text = "Save"
+        '
+        'SaveAsToolStripMenuItem
+        '
+        Me.SaveAsToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.lc_saveas
+        Me.SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem"
+        Me.SaveAsToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
+            Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
+        Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(233, 26)
+        Me.SaveAsToolStripMenuItem.Text = "Save As"
+        '
+        'CutToolStripMenuItem
+        '
+        Me.CutToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.lc_cut
+        Me.CutToolStripMenuItem.Name = "CutToolStripMenuItem"
+        Me.CutToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
+        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.CutToolStripMenuItem.Text = "Cut"
+        '
+        'CopyToolStripMenuItem
+        '
+        Me.CopyToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.lc_copy
+        Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
+        Me.CopyToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.CopyToolStripMenuItem.Text = "Copy"
+        '
+        'PasteToolStripMenuItem
+        '
+        Me.PasteToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.lc_paste
+        Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
+        Me.PasteToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.V), System.Windows.Forms.Keys)
+        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.PasteToolStripMenuItem.Text = "Paste"
+        '
+        'SelectAllToolStripMenuItem
+        '
+        Me.SelectAllToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.lc_selectall
+        Me.SelectAllToolStripMenuItem.Name = "SelectAllToolStripMenuItem"
+        Me.SelectAllToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
+        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.SelectAllToolStripMenuItem.Text = "Select All"
+        '
+        'UndoToolStripMenuItem
+        '
+        Me.UndoToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.lc_undo
+        Me.UndoToolStripMenuItem.Name = "UndoToolStripMenuItem"
+        Me.UndoToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Z), System.Windows.Forms.Keys)
+        Me.UndoToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.UndoToolStripMenuItem.Text = "Undo"
+        '
+        'RedoToolStripMenuItem
+        '
+        Me.RedoToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.lc_redo
+        Me.RedoToolStripMenuItem.Name = "RedoToolStripMenuItem"
+        Me.RedoToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Y), System.Windows.Forms.Keys)
+        Me.RedoToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.RedoToolStripMenuItem.Text = "Redo"
+        '
+        'FindToolStripMenuItem
+        '
+        Me.FindToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.lc_searchdialog
+        Me.FindToolStripMenuItem.Name = "FindToolStripMenuItem"
+        Me.FindToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F), System.Windows.Forms.Keys)
+        Me.FindToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.FindToolStripMenuItem.Text = "Find..."
+        '
+        'ZoomInToolStripMenuItem
+        '
+        Me.ZoomInToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.lc_zoomin
+        Me.ZoomInToolStripMenuItem.Name = "ZoomInToolStripMenuItem"
+        Me.ZoomInToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+Plus"
+        Me.ZoomInToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Oemplus), System.Windows.Forms.Keys)
+        Me.ZoomInToolStripMenuItem.Size = New System.Drawing.Size(241, 26)
+        Me.ZoomInToolStripMenuItem.Text = "Zoom In"
+        '
+        'ZoomOutToolStripMenuItem
+        '
+        Me.ZoomOutToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.lc_zoomout
+        Me.ZoomOutToolStripMenuItem.Name = "ZoomOutToolStripMenuItem"
+        Me.ZoomOutToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+Minus"
+        Me.ZoomOutToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.OemMinus), System.Windows.Forms.Keys)
+        Me.ZoomOutToolStripMenuItem.Size = New System.Drawing.Size(241, 26)
+        Me.ZoomOutToolStripMenuItem.Text = "Zoom Out"
+        '
+        'ZoomTo100ToolStripMenuItem
+        '
+        Me.ZoomTo100ToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.lc_zoomoptimal
+        Me.ZoomTo100ToolStripMenuItem.Name = "ZoomTo100ToolStripMenuItem"
+        Me.ZoomTo100ToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D0), System.Windows.Forms.Keys)
+        Me.ZoomTo100ToolStripMenuItem.Size = New System.Drawing.Size(241, 26)
+        Me.ZoomTo100ToolStripMenuItem.Text = "Zoom to 100%"
+        '
+        'FontToolStripMenuItem
+        '
+        Me.FontToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.lc_textattributes
+        Me.FontToolStripMenuItem.Name = "FontToolStripMenuItem"
+        Me.FontToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.FontToolStripMenuItem.Text = "Font..."
+        '
+        'TextColorToolStripMenuItem
+        '
+        Me.TextColorToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.lc_outlinefont
+        Me.TextColorToolStripMenuItem.Name = "TextColorToolStripMenuItem"
+        Me.TextColorToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.TextColorToolStripMenuItem.Text = "Text Color..."
+        '
+        'HighlightColorToolStripMenuItem
+        '
+        Me.HighlightColorToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.sc_backgroundcolor
+        Me.HighlightColorToolStripMenuItem.Name = "HighlightColorToolStripMenuItem"
+        Me.HighlightColorToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.HighlightColorToolStripMenuItem.Text = "Highlight Color..."
+        '
+        'WordWrapToolStripMenuItem
+        '
+        Me.WordWrapToolStripMenuItem.Checked = True
+        Me.WordWrapToolStripMenuItem.CheckOnClick = True
+        Me.WordWrapToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.WordWrapToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.lc_wraptext
+        Me.WordWrapToolStripMenuItem.Name = "WordWrapToolStripMenuItem"
+        Me.WordWrapToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.WordWrapToolStripMenuItem.Text = "Word Wrap"
+        '
+        'ImageToolStripMenuItem
+        '
+        Me.ImageToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.lc_insertgraphic
+        Me.ImageToolStripMenuItem.Name = "ImageToolStripMenuItem"
+        Me.ImageToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ImageToolStripMenuItem.Text = "Image..."
+        '
+        'WebsiteToolStripMenuItem
+        '
+        Me.WebsiteToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.sc_browseview
+        Me.WebsiteToolStripMenuItem.Name = "WebsiteToolStripMenuItem"
+        Me.WebsiteToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.WebsiteToolStripMenuItem.Text = "Website"
+        '
+        'AboutBasicTextEditorToolStripMenuItem
+        '
+        Me.AboutBasicTextEditorToolStripMenuItem.Image = Global.Bexitor.My.Resources.Resources.tip_small
+        Me.AboutBasicTextEditorToolStripMenuItem.Name = "AboutBasicTextEditorToolStripMenuItem"
+        Me.AboutBasicTextEditorToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.AboutBasicTextEditorToolStripMenuItem.Text = "About Bexitor"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -416,7 +416,7 @@ Partial Class Form1
         Me.HelpButton = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Bexitor - New File"

@@ -350,4 +350,5 @@ Public Class Form1
     Private Sub RedoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RedoToolStripMenuItem.Click
         RichTextBox1.Redo()
     End Sub
+
 End Class
